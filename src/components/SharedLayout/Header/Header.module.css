@@ -1,0 +1,52 @@
+@import '../../../styles/vars.css';
+
+.header {
+  position: fixed;
+
+  height: 140px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  background: var(--gradient-header);
+}
+
+.logo {
+  width: 100px;
+  height: 70px;
+
+  background-color: red;
+  border-radius: 70%;
+
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navlist {
+  display: flex;
+  gap: 60px;
+}
+
+.navlistItem {
+  color: var(--color-text);
+  font-family: Outfit;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.contacts {
+  color: var(--color-text);
+  font-family: Outfit;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}

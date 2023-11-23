@@ -4,8 +4,6 @@ import Home from './pages/Home';
 import Details from './pages/Details';
 import Faq from './pages/Faq';
 
-import './App.css';
-
 function App() {
   return (
     <Routes>
