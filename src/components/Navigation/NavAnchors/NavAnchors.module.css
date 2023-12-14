@@ -1,0 +1,13 @@
+.navlist {
+  display: flex;
+  gap: 60px;
+}
+
+.navlistItem {
+  color: var(--color-text);
+  font-family: Outfit;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}

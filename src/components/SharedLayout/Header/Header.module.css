@@ -3,7 +3,8 @@
 .header {
   position: fixed;
 
-  height: 140px;
+  width: 100%;
+  height: 72px;
 
   display: flex;
   justify-content: space-around;
@@ -12,34 +13,26 @@
   background: var(--gradient-header);
 }
 
+.container {
+  width: 343px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .logo {
-  width: 100px;
-  height: 70px;
+  /* width: 100px; */
+  /* height: 70px; */
 
-  background-color: red;
-  border-radius: 70%;
-
-  text-align: center;
+  /* background-color: red; */
+  /* border-radius: 70%; */
 }
 
 .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.navlist {
-  display: flex;
-  gap: 60px;
-}
-
-.navlistItem {
-  color: var(--color-text);
-  font-family: Outfit;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
 }
 
 .contacts {
@@ -49,4 +42,30 @@
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+}
+
+.burgerBtn {
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+
+  transition: transform 0.3s;
+}
+
+.btnIcon {
+  fill: var(--color-text);
+
+  &:hover,
+  &:focus {
+    fill: var(--color-hover);
+    transform: scale(0.9);
+    transition: 0.3s;
+  }
 }

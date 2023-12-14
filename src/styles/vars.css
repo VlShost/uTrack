@@ -1,6 +1,8 @@
 :root {
   --color-main: #ffffff;
   --color-text: #f1f1f1;
+  --color-hover: #066fb2;
+  --footer-bg: #061b29;
 
   --gradient-header: linear-gradient(
     180deg,
@@ -10,4 +12,8 @@
     rgba(8, 8, 8, 0.47) 66.67%,
     rgba(8, 8, 8, 0) 100%
   );
+
+  --mobile: 343px;
+  --tablet: 664px;
+  --desktop: 1462px;
 }

@@ -1,0 +1,28 @@
+.burgerList {
+  position: absolute;
+  top: 60px;
+  right: 16px;
+
+  padding: 28px 20px;
+
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 28px;
+
+  border-radius: 10px;
+  background: var(--footer-bg);
+}
+
+.burgerListItem {
+  color: var(--color-text);
+
+  font-family: Outfit;
+  font-size: 18px;
+  font-weight: 600;
+
+  &:hover {
+    color: var(--color-hover);
+  }
+}

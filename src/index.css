@@ -1,5 +1,62 @@
 @import './styles/reset.css';
+@import './styles/vars.css';
 
 body {
-  /* scroll-behavior: smooth; */
+  background-color: var(--primary-backgroung-color);
+  color: var(--primary-text-color);
+
+  list-style: none;
+
+  font-family: var(--pages-main-font);
+  font-size: 14px;
+  letter-spacing: 0.03em;
+}
+
+.container {
+  max-width: var(--desktop);
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: var(--desktop)) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.flex-align {
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: var(--tablet)) {
+    justify-content: space-between;
+  }
+}
+
+.img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.no-gap {
+  display: block;
+}
+
+.title {
+  color: var(--title-features-color);
+
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.2;
+  text-align: center;
+
+  @media screen and (min-width: var(--desktop)) {
+    font-size: 36px;
+  }
 }
