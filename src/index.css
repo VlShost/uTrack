@@ -6,8 +6,6 @@ body {
   background-color: var(--color-body-bg);
   color: var(--primary-text-color);
 
-  list-style: none;
-
   font-family: -apple-system, BlinkMacSystemFont, 'Outfit', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
     'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   font-size: 14px;

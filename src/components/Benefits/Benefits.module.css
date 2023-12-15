@@ -1,0 +1,43 @@
+.container {
+  max-width: 343px;
+
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @media screen and (min-width: var(--tablet)) {
+    max-width: var(--tablet);
+  }
+  @media screen and (min-width: var(--desktop)) {
+    max-width: var(--desktop);
+  }
+}
+
+.title {
+  color: var(--color-txt-black);
+
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.list {
+}
+
+/* linear-gradient(180deg, #72B6D3 19%, #004572 86%) */
+.listItem {
+  background: red;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.itemIcon {
+  fill: currentColor;
+  stroke: currentColor;
+}
+
+.text {
+  color: var(--color-txt-black);
+
+  font-size: 14px;
+  font-weight: 500;
+}
