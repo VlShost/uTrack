@@ -38,7 +38,7 @@ const BurgerMenu = () => {
           </AnchorLink>
         </li>
         <li>
-          <NavLink to="/faq" className={css.burgerListItem}>
+          <NavLink to="/" className={css.btnDisabled}>
             FAQ
           </NavLink>
         </li>

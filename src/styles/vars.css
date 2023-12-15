@@ -1,8 +1,19 @@
 :root {
-  --color-main: #ffffff;
+  --mobile: 375px;
+  --tablet: 664px;
+  --desktop: 1462px;
+
+  --color-body-bg: #f1f1f1;
+  --color-main: #72b6d3;
   --color-text: #f1f1f1;
-  --color-hover: #066fb2;
+  --color-txt-black: #1a1a18;
+  --color-accent: #0d6197;
+  --color-err: #9d0707;
   --footer-bg: #061b29;
+
+  --color-hover: #066fb2;
+  --color-clicked: #05283f;
+  --color-disabled: #7d7d7d;
 
   --gradient-header: linear-gradient(
     180deg,
@@ -12,8 +23,15 @@
     rgba(8, 8, 8, 0.47) 66.67%,
     rgba(8, 8, 8, 0) 100%
   );
-
-  --mobile: 343px;
-  --tablet: 664px;
-  --desktop: 1462px;
+  --gradient-hero: linear-gradient(
+    90deg,
+    #090908 4.81%,
+    rgba(8, 8, 8, 0.93) 19.35%,
+    rgba(7, 7, 7, 0.86) 34.41%,
+    rgba(7, 7, 6, 0.78) 47.91%,
+    rgba(6, 6, 5, 0.67) 62.46%,
+    rgba(5, 5, 5, 0.56) 75.44%,
+    rgba(4, 4, 3, 0.43) 87.39%,
+    rgba(2, 2, 2, 0.23) 99.85%
+  );
 }

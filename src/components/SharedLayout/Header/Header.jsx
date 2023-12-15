@@ -20,9 +20,6 @@ const Header = () => {
       <div className={css.container}>
         <nav className={css.navbar}>
           <NavLink to={'/'} className={css.logo}>
-            {/* <svg>
-              <use href={logo}></use>
-            </svg> */}
             <img src={logo} alt="logo" />
           </NavLink>
 
@@ -32,9 +29,6 @@ const Header = () => {
           </NavLink> */}
         </nav>
         <button onClick={showBurger} className={css.burgerBtn}>
-          {/* <svg>
-            <use href={burger}></use>
-          </svg> */}
           <img src={burger} alt="menuBtn" className={css.btnIcon} />
         </button>
         {burgerVisible && <BurgerMenu />}
