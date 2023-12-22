@@ -15,29 +15,40 @@
 .title {
   color: var(--color-txt-black);
 
+  text-align: center;
   font-size: 18px;
   font-weight: 600;
 }
 
 .list {
+  display: flex;
+  flex-direction: column;
 }
 
-/* linear-gradient(180deg, #72B6D3 19%, #004572 86%) */
 .listItem {
-  background: red;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.itemNum {
+  background: var(--gradient-benefits);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
 
-.itemIcon {
-  fill: currentColor;
-  stroke: currentColor;
+  font-size: 90px;
+  font-weight: 600;
 }
 
 .text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   color: var(--color-txt-black);
 
+  text-align: justify;
   font-size: 14px;
   font-weight: 500;
 }
