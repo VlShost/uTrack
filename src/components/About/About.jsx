@@ -2,7 +2,7 @@ import css from './About.module.css';
 
 const About = () => {
   return (
-    <div id="about" className={css.sectionAbout}>
+    <section id="about" className={css.sectionAbout}>
       <div className={css.container}>
         <h2 className={css.title}>Про нас</h2>
         <p className={css.text}>
@@ -19,7 +19,7 @@ const About = () => {
           будь-які побажання клієнтів.
         </p>
       </div>
-    </div>
+    </section>
   );
 };
 
