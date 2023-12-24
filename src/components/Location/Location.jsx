@@ -6,8 +6,8 @@ const Location = () => {
       <h2 className={css.title}>Ми завжди готові надати будь-яку інформацію</h2>
       <p className={css.text}>
         <span className={css.text_priority}>С.К.А.Т.</span> надасть Вам найкращу консультацію та
-        допоможе з вибором потрібного обладнання для Вашого бізнесу за адресою:{' '}
-        <span className={css.text_priority}>м. Дніпро, вул. Артільна 9, офіс 39!</span>
+        допоможе з вибором потрібного обладнання для Вашого бізнесу за адресою:
+        <p className={css.text_priority}>м. Дніпро, вул. Артільна 9, офіс 39!</p>
       </p>
      
         <iframe className={css.map}
