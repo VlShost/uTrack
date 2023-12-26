@@ -1,5 +1,5 @@
 const Partners = () => {
-  return <div id="partners">Partners</div>;
+  return <section id="partners">Partners</section>;
 };
 
 export default Partners;

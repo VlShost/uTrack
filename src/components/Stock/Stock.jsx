@@ -6,10 +6,10 @@ import data from '../../data/stockItems.json';
 
 const Stock = () => {
   return (
-    <div id="stock">
+    <section id="stock">
       <h2 className={css.title}>Що ми пропонуємо?</h2>
       <CardItem card={data} />
-    </div>
+    </section>
   );
 };
 
