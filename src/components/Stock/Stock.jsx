@@ -17,7 +17,6 @@ const Stock = () => {
         <Swiper
           spaceBetween={40}
           grabCursor={true}
-          loop={true}
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,
@@ -30,12 +29,15 @@ const Stock = () => {
           breakpoints={{
             375: {
               slidesPerView: 1,
+              loop: true,
             },
             664: {
               slidesPerView: 2,
+              loop: true,
             },
             1440: {
               slidesPerView: 3,
+              loop: false,
             },
           }}
           keyboard={{ enabled: true }}
@@ -44,7 +46,26 @@ const Stock = () => {
           <SwiperSlide>
             <div className={css.container}>
               <div className={css.card}>
-                <div className={css.img}></div>
+                <div className={css.img}>
+                  <picture>
+                    <source
+                      media="(min-width: 1440px)"
+                      srcSet="../../assets/images/stock/trackers/uTrackR3-1x.png 1x, ../../assets/images/stock/trackers/uTrackR3-2x.png 2x"
+                      type="image/png"
+                    />
+                    <source
+                      media="(min-width: 744px)"
+                      srcSet="../../assets/images/stock/trackers/uTrackR3-1x.png 1x, ../../assets/images/stock/trackers/uTrackR3-2x.png 2x"
+                      type="image/png"
+                    />
+                    <source
+                      media="(min-width: 375px)"
+                      srcSet="../../assets/images/stock/trackers/uTrackR3-1x.png 1x, ../../assets/images/stock/trackers/uTrackR3-2x.png 2x"
+                      type="image/png"
+                    />
+                    <img src="../../assets/images/stock/trackers/uTrackR3-1x.png" alt="tracker" />
+                  </picture>
+                </div>
 
                 <div className={css.infoWrapper}>
                   <p className={css.name}>GPS-трекери для всіх видів транспорту</p>
