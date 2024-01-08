@@ -3,7 +3,7 @@ import css from './Benefits.module.css';
 
 const Benefits = () => {
   return (
-    <div id="benefits">
+    <section id="benefits">
       <div className={css.container}>
         <h2 className={css.title}>Чому ми найкращі?</h2>
         <ul className={css.list}>
@@ -29,7 +29,7 @@ const Benefits = () => {
           </li>
         </ul>
       </div>
-    </div>
+    </section>
   );
 };
 
