@@ -1,3 +1,23 @@
+.stock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  max-width: 343px;
+
+  /* padding-left: 15px;
+  padding-right: 15px; */
+
+  @media screen and (min-width: var(--tablet)) {
+    max-width: var(--tablet);
+  }
+  @media screen and (min-width: var(--desktop)) {
+    max-width: var(--desktop);
+  }
+}
+
 .title {
   color: var(--color-txt-black);
 
