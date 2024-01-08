@@ -6,25 +6,6 @@
   font-weight: 600;
 }
 
-.container {
-  max-width: var(--mobile);
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
-  /* padding-left: 15px;
-  padding-right: 15px; */
-
-  @media screen and (min-width: var(--tablet)) {
-    max-width: var(--tablet);
-  }
-  @media screen and (min-width: var(--desktop)) {
-    max-width: var(--desktop);
-  }
-}
-
 .card {
   max-width: 343px;
 
@@ -39,7 +20,7 @@
   width: 283px;
   height: 283px;
 
-  background-color: rgb(196, 196, 196);
+  background-color: var(--color-body-bg);
 }
 
 .infoWrapper {
@@ -62,7 +43,6 @@
 .info {
   color: var(--color-txt-black);
 
-  /* text-align: justify; */
   font-size: 14px;
   font-weight: 400;
 }
@@ -85,18 +65,31 @@
   font-weight: 600;
 }
 
-.swiperPagination .swiper-pagination-bullet {
-  width: 15px;
-  height: 15px;
+.swiperPagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  color: white;
-  border-color: var(--color-txt-black);
-  border-radius: 50%;
+  margin-top: 10px;
+  color: red;
 }
 
-.swiperPagination .swiper-pagination-bullet-active {
-  width: 15px;
-  height: 15px;
+.swiperPagination {
+  :global(.swiper-pagination-bullet) {
+    width: 15px;
+    height: 15px;
 
-  background: var(--color-txt-black);
+    background-color: var(--color-text);
+    border: 1px solid var(--color-txt-black);
+    opacity: 1;
+
+    border-radius: 50%;
+  }
+
+  :global(.swiper-pagination-bullet-active) {
+    width: 15px;
+    height: 15px;
+
+    background-color: var(--color-txt-black);
+  }
 }
