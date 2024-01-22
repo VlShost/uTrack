@@ -1,6 +1,5 @@
 .stock {
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
 }
@@ -8,25 +7,12 @@
 .container {
   max-width: 343px;
 
-
-  
   @media screen and (min-width: 744px) {
     max-width: 744px;
   }
   @media screen and (min-width: 1920px) {
     max-width: 1462px;
   }
-}
-
-.wrapper_card{
-    display: flex;
-  /* flex-direction: column; */
-  justify-content: center;
-  align-items: center;
-
-
-
-  
 }
 
 .title {
@@ -89,8 +75,6 @@
   background-color: var(--color-accent);
   border: none;
   border-radius: 10px;
-
-  color: var(--color-text);
 
   font-size: 18px;
   font-weight: 600;
