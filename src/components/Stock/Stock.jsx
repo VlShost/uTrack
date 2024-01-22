@@ -41,7 +41,7 @@ const Stock = () => {
           modules={[Autoplay, Pagination, Keyboard]}
         >
           <SwiperSlide>
-            <div className={css.container}>
+            <div className={css.wrapper_card}>
               <div className={css.card}>
                 <div className={css.img}>
                   <picture>
@@ -79,7 +79,7 @@ const Stock = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className={css.container}>
+            <div className={css.wrapper_card}>
               <div className={css.card}>
                 <div className={css.img}>
                   <picture>
@@ -117,7 +117,7 @@ const Stock = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className={css.container}>
+            <div className={css.wrapper_card}>
               <div className={css.card}>
                 <div className={css.img}>
                   <picture>
