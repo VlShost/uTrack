@@ -38,22 +38,17 @@
   display: flex;
   align-items: center;
   margin-left: 16px;
-
-  color: var(--color-text);
-  fill: var(--color-text);
+  color: currentColor;
   text-align: center;
   stroke: currentColor;
   font-size: 16px;
   text-decoration: none;
   font-weight: 500;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
- 
+  transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts:hover,
 .contacts:focus {
   color: var(--color-hover);
-  fill: var(--color-hover);
-  transform: scale(1.04)
 }
 
 .contacts_img {
