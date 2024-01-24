@@ -32,6 +32,7 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+  margin-bottom: 20px;
 }
 
 .contacts {
@@ -53,4 +54,61 @@
 
 .contacts_img {
   margin-right: 10px;
+}
+
+.address_thumb {
+  display: flex;
+  align-items: center;
+
+  margin-left: 16px;
+  margin-top: 16px;
+  transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.address {
+  width: 296px;
+  /* margin-right: auto; */
+  color: currentColor;
+  font-family: Outfit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.address_thumb:hover,
+.address_thumb:focus {
+  color: var(--color-hover);
+}
+
+.address_img {
+  margin-right: 7px;
+}
+
+.text {
+  text-align: center;
+  font-family: Outfit;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.utrack {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.team {
+  vertical-align: text-top;
+  font-size: 8px;
+  margin-right: 13px;
+}
+
+.copyright_thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 63px;
+  padding-bottom: 40px;
 }

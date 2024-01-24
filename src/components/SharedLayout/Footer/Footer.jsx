@@ -6,7 +6,8 @@ import Phone from '../../../assets/images/phone.svg?react';
 import Mail from '../../../assets/images/mail.svg?react';
 import Viber from '../../../assets/images/viber.svg?react';
 import Telegram from '../../../assets/images/telegram.svg?react';
-
+import Location from '../../../assets/images/location.svg?react';
+import Copyright from '../../../assets/images/copyright.svg?react';
 const Footer = () => {
   return (
     <footer className={css.footer}>
@@ -49,6 +50,29 @@ const Footer = () => {
             </a>
           </li>
         </ul>
+        <div>
+          <h3 className={css.title}>Адреса</h3>
+          <address className={css.address_thumb}>
+            <Location className={css.address_img} />
+            <a
+              className={css.address}
+              href="https://maps.app.goo.gl/yn3qioXGQ9ysqAKi8"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+            >
+              Україна, м. Дніпро, вул. Артільна 9, офіс 39
+            </a>
+          </address>
+        </div>
+        <div className={css.copyright_thumb}>
+          <Copyright className={css.copyright_img} />
+          <p className={css.text}>
+            <span className={css.utrack}>
+              uTrack<span className={css.team}>ТМ</span>
+            </span>
+            Всі права захищені.
+          </p>
+        </div>
       </div>
     </footer>
   );
