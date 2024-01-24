@@ -40,9 +40,9 @@
   margin-left: 16px;
 
   color: var(--color-text);
-
+  fill: var(--color-text);
   text-align: center;
-
+  stroke: currentColor;
   font-size: 16px;
   text-decoration: none;
   font-weight: 500;
@@ -50,6 +50,7 @@
 .contacts:hover,
 .contacts:focus {
   color: var(--color-hover);
+  fill: var(--color-hover);
 }
 
 .contacts_img {
