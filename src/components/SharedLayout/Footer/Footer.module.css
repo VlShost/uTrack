@@ -1,0 +1,57 @@
+.container {
+  background-color: var(--footer-bg);
+  color: var(--color-text);
+}
+
+.logo {
+  width: 76px;
+  height: 52px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 24px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.title {
+  display: inline;
+  margin-left: 16px;
+  margin-right: auto;
+
+  text-align: center;
+
+  font-family: Outfit;
+  font-size: 20px;
+
+  font-weight: 600;
+}
+
+.thumb_contacts {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contacts {
+  display: flex;
+  align-items: center;
+  margin-left: 16px;
+
+  color: var(--color-text);
+
+  text-align: center;
+
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 500;
+}
+.contacts:hover,
+.contacts:focus {
+  color: var(--color-hover);
+}
+
+.contacts_img {
+  margin-right: 10px;
+}
