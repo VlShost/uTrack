@@ -1,0 +1,114 @@
+.container {
+  background-color: var(--footer-bg);
+  color: var(--color-text);
+}
+
+.logo {
+  width: 76px;
+  height: 52px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 24px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.title {
+  display: inline;
+  margin-left: 16px;
+  margin-right: auto;
+
+  text-align: center;
+
+  font-family: Outfit;
+  font-size: 20px;
+
+  font-weight: 600;
+}
+
+.thumb_contacts {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.contacts {
+  display: flex;
+  align-items: center;
+  margin-left: 16px;
+  color: currentColor;
+  text-align: center;
+  stroke: currentColor;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contacts:hover,
+.contacts:focus {
+  color: var(--color-hover);
+}
+
+.contacts_img {
+  margin-right: 10px;
+}
+
+.address_thumb {
+  display: flex;
+  align-items: center;
+
+  margin-left: 16px;
+  margin-top: 16px;
+  transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.address {
+  width: 296px;
+  /* margin-right: auto; */
+  color: currentColor;
+  font-family: Outfit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.address_thumb:hover,
+.address_thumb:focus {
+  color: var(--color-hover);
+}
+
+.address_img {
+  margin-right: 7px;
+}
+
+.text {
+  text-align: center;
+  font-family: Outfit;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.utrack {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.team {
+  vertical-align: text-top;
+  font-size: 8px;
+  margin-right: 13px;
+}
+
+.copyright_thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 63px;
+  padding-bottom: 40px;
+}
