@@ -4,6 +4,8 @@
   padding: 152px 0 120px 0;
 
   background-image: var(--gradient-hero), url(../../assets/images/hero/hero-mob1x.jpg);
+  background-position: center;
+  background-size: contain;
 
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
     background-image: var(--gradient-hero), url(../../assets/images/hero/hero-mob2x.jpg);
