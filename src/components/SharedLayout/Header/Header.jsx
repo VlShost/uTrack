@@ -31,7 +31,12 @@ const Header = () => {
         <button onClick={showBurger} className={css.burgerBtn}>
           <img src={burger} alt="menuBtn" className={css.btnIcon} />
         </button>
-        {burgerVisible && <BurgerMenu />}
+
+        {burgerVisible && (
+          <div className="dropdown">
+            <BurgerMenu />
+          </div>
+        )}
         {/* <div className={css.wrapper}>
           <NavLink className={css.contacts} to="tel:+38 050 345 14 15">
             +38 050 345 14 15
