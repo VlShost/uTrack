@@ -6,14 +6,29 @@ import BurgerMenu from '../../BurgerMenu';
 
 import logo from '../../../assets/logoSmall.svg';
 import burger from '../../../assets/burgerMenu.svg';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 const Header = () => {
   const [burgerVisible, setBurgerVisible] = useState(false);
+  const btnRef = useRef();
 
   const showBurger = () => {
     setBurgerVisible((prev) => !prev);
   };
+
+  useEffect(() => {
+    const closeDropdown = (e) => {
+      if (e.composedPath() !== btnRef.current) {
+        setBurgerVisible(false);
+      }
+    };
+
+    document.body.addEventListener('click', closeDropdown);
+
+    return () => {
+      document.body.removeEventListener('click', closeDropdown);
+    };
+  }, []);
 
   return (
     <header className={css.header}>
@@ -28,15 +43,16 @@ const Header = () => {
             FAQ
           </NavLink> */}
         </nav>
-        <button onClick={showBurger} className={css.burgerBtn}>
+        <button ref={btnRef} onClick={showBurger} className={css.burgerBtn}>
           <img src={burger} alt="menuBtn" className={css.btnIcon} />
         </button>
 
         {burgerVisible && (
-          <div className="dropdown">
+          <div className={`dropdown` + (burgerVisible ? `visible` : `invisible`)}>
             <BurgerMenu />
           </div>
         )}
+        {/* {burgerVisible && <BurgerMenu />} */}
         {/* <div className={css.wrapper}>
           <NavLink className={css.contacts} to="tel:+38 050 345 14 15">
             +38 050 345 14 15
