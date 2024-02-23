@@ -1,6 +1,14 @@
+import { useState } from 'react';
 import css from './Hero.module.css';
+import Modal from '../Modal/Modal';
 
 const Hero = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const toggleModal = () => {
+    setIsModalOpen((prevState) => !prevState);
+  };
+
   return (
     <section className={css.sectionHero}>
       <div className={css.container}>
@@ -8,7 +16,10 @@ const Hero = () => {
         <p className={css.text}>
           Контролюйте свій бізнес з автомобільним обладнанням найвищої якості
         </p>
-        <button className={css.actionBtn}>Отримати консультацію</button>
+        <button onClick={toggleModal} className={css.actionBtn}>
+          Отримати консультацію
+        </button>
+        {isModalOpen && <Modal toggleModal={toggleModal}>I am super modal</Modal>}
       </div>
     </section>
   );
