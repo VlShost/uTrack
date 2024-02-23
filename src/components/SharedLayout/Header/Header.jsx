@@ -18,7 +18,7 @@ const Header = () => {
 
   useEffect(() => {
     const closeDropdown = (e) => {
-      if (e.composedPath() !== btnRef.current) {
+      if (!btnRef.current.contains(e.target)) {
         setBurgerVisible(false);
       }
     };
@@ -47,11 +47,9 @@ const Header = () => {
           <img src={burger} alt="menuBtn" className={css.btnIcon} />
         </button>
 
-        {burgerVisible && (
-          <div className={`dropdown` + (burgerVisible ? `visible` : `invisible`)}>
-            <BurgerMenu />
-          </div>
-        )}
+        {burgerVisible && <BurgerMenu />}
+        {/* <div className={`dropdown` + (burgerVisible ? `visible` : `invisible`)}> */}
+        {/* </div> */}
         {/* {burgerVisible && <BurgerMenu />} */}
         {/* <div className={css.wrapper}>
           <NavLink className={css.contacts} to="tel:+38 050 345 14 15">
