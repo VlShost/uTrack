@@ -12,6 +12,10 @@
   padding-top: 24px;
   padding-bottom: 20px;
   text-align: center;
+  @media screen and (min-width: 744px) {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
 }
 
 .title {
@@ -25,6 +29,11 @@
   font-size: 20px;
 
   font-weight: 600;
+  @media screen and (min-width: 744px) {
+    font-size: 24px;
+    letter-spacing: 0em;
+    margin-left: 40px;
+  }
 }
 
 .thumb_contacts {
@@ -33,19 +42,57 @@
   flex-direction: column;
   gap: 12px;
   margin-bottom: 20px;
+  flex-wrap: wrap;
+  margin-left: 16px;
+  font-family: Outfit;
+  line-height: 20px;
+  letter-spacing: 0em;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+}
+
+@media screen and (min-width: 744px) {
+  .thumb_contacts {
+    gap: 30px;
+    margin-left: 40px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    flex-direction: row;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 23px;
+  }
+
+  .contacts_item:nth-child(2) {
+    order: 3;
+  }
+
+  .contacts_item:nth-child(4) {
+    order: 3;
+  }
+}
+
+.contacts_item {
+  @media screen and (min-width: 744px) {
+    flex-basis: calc((100% - 30px) / 2);
+  }
 }
 
 .contacts {
   display: flex;
   align-items: center;
-  margin-left: 16px;
+
   color: currentColor;
   text-align: center;
   stroke: currentColor;
-  font-size: 16px;
+
   text-decoration: none;
-  font-weight: 500;
+
   transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: 744px) {
+  }
 }
 .contacts:hover,
 .contacts:focus {
@@ -67,7 +114,6 @@
 
 .address {
   width: 296px;
-  /* margin-right: auto; */
   color: currentColor;
   font-family: Outfit;
   font-size: 16px;
