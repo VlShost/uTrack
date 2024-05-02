@@ -1,12 +1,13 @@
 import { useState } from 'react';
-import css from './Hero.module.scss';
 import Modal from '../Modal/Modal';
+
+import css from './Hero.module.scss';
 
 const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const toggleModal = () => {
-    setIsModalOpen((prevState) => !prevState);
+    setIsModalOpen((prev) => !prev);
   };
 
   return (

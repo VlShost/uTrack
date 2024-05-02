@@ -25,7 +25,7 @@ const Benefits = () => {
           </li>
           <li className={css.listItem}>
             <span className={css.itemNum}>4</span>
-            <p className={css.text}>444444Робота комплексу відбувається в режимі реального часу</p>
+            <p className={css.text}>Робота комплексу відбувається в режимі реального часу</p>
           </li>
         </ul>
       </div>

@@ -28,18 +28,8 @@ const BurgerMenu = () => {
           </AnchorLink>
         </li>
         <li>
-          <AnchorLink href="#partners" className={css.burgerListItem}>
-            Партнери
-          </AnchorLink>
-        </li>
-        <li>
-          <AnchorLink href="#location" className={css.burgerListItem}>
-            Мапа
-          </AnchorLink>
-        </li>
-        <li>
           <NavLink to="/" className={css.btnDisabled}>
-            FAQ
+            Часті питання
           </NavLink>
         </li>
         <li>

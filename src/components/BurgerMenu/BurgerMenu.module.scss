@@ -1,3 +1,5 @@
+@import '../../styles/utils';
+
 .burgerList {
   position: absolute;
   top: 60px;
@@ -12,7 +14,12 @@
   gap: 28px;
 
   border-radius: 10px;
-  background: getColor('footer-bg');
+  background-color: getColor('burger-bg');
+
+  @media screen and (min-width: $tablet) {
+    top: 80px;
+    right: 40px;
+  }
 }
 
 .burgerListItem {

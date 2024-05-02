@@ -1,5 +1,5 @@
 import css from './Footer.module.scss';
-import logo from '../../../assets/logoSmall.svg';
+import logo from '../../../assets/images/logo.svg';
 import { NavLink } from 'react-router-dom';
 
 import Phone from '../../../assets/images/phone.svg?react';

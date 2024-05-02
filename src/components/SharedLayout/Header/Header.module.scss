@@ -10,6 +10,14 @@
   @include flexAlign();
 
   background: getGradient('header');
+
+  @media screen and (min-width: $tablet) {
+    height: 115px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    height: 140px;
+  }
 }
 
 .container {
@@ -17,20 +25,63 @@
   padding: 0 16px;
 
   @include flexAlign(flex, space-between);
+
+  @media screen and (min-width: $tablet) {
+    padding: 0 40px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 0 80px;
+  }
 }
 
 .navbar {
   @include flexAlign();
 }
 
-// .contacts {
-//   color: getColor('text');
-//   font-family: Outfit;
-//   font-size: 18px;
-//   font-style: normal;
-//   font-weight: 600;
-//   line-height: normal;
-// }
+.logo {
+  width: 90px;
+
+  @media screen and (min-width: $tablet) {
+    width: 120px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 145px;
+  }
+
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+    transition: 0.3s;
+  }
+}
+
+.navlist {
+  display: none;
+
+  @media screen and (min-width: $desktop) {
+    margin-left: 130px;
+
+    display: flex;
+    gap: 60px;
+  }
+}
+
+.navlistItem {
+  color: getColor('text');
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.contacts {
+  display: none;
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    gap: 90px;
+  }
+}
 
 .burgerBtn {
   padding: 0;
@@ -41,6 +92,10 @@
   border: none;
 
   transition: transform 0.3s;
+
+  @media screen and (min-width: $desktop) {
+    display: none;
+  }
 }
 
 .btnIcon {
@@ -49,7 +104,7 @@
   &:hover,
   &:focus {
     fill: getColor('hover');
-    transform: scale(0.9);
+    transform: scale(1.1);
     transition: 0.3s;
   }
 }

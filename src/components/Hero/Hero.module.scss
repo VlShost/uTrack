@@ -3,23 +3,50 @@
 .section {
   padding: 152px 0 120px 0;
 
-  background-image: getGradient('hero'), url(../../assets/images/hero/hero-mob1x.jpg);
+  background-image: getGradient('hero'), url(../../assets/images/hero/hero-mob1x.jpeg);
   background-position: center;
-  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-    background-image: getGradient('hero'), url(../../assets/images/hero/hero-mob2x.jpg);
+    background-image: getGradient('hero'), url(../../assets/images/hero/hero-mob2x.jpeg);
+  }
+
+  @media screen and (min-width: $mobile) {
+    padding: 155px 0 70px0;
+
+    background-image: getGradient('hero'), url(../../assets/images/hero/hero-tabl2x.jpeg);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: getGradient('hero'), url(../../assets/images/hero/hero-tabl2x.jpeg);
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    padding: 259px 0 234px 0;
+
+    background-image: getGradient('hero'), url(../../assets/images/hero/hero-desk2x.jpeg);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: getGradient('hero'), url(../../assets/images/hero/hero-desk2x.jpeg);
+    }
   }
 }
 
 .container {
+  margin: 0 auto;
   padding: 0 16px;
 
   @media screen and (min-width: $tablet) {
-    max-width: $tablet;
+    padding: 0 40px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
+
   @media screen and (min-width: $desktop) {
-    max-width: $desktop;
+    padding: 0 230px;
   }
 }
 
@@ -28,6 +55,21 @@
 
   font-size: 32px;
   font-weight: 600;
+
+  @media screen and (min-width: $tablet) {
+    max-width: 435px;
+
+    margin: 0;
+  }
+
+  @media screen and (min-width: $desktop) {
+    max-width: 868px;
+
+    margin: 0;
+
+    font-size: 64px;
+    font-weight: 700;
+  }
 }
 
 .text {
@@ -37,11 +79,25 @@
 
   font-size: 18px;
   font-weight: 500;
+  word-spacing: 4px;
+
+  @media screen and (min-width: $tablet) {
+    margin-top: 30px;
+
+    max-width: 435px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    max-width: 720px;
+
+    margin-top: 60px;
+
+    font-size: 32px;
+  }
 }
 
 .actionBtn {
   width: 100%;
-  height: 40px;
 
   margin-top: 131px;
   padding: 10px;
@@ -51,4 +107,30 @@
 
   border: none;
   border-radius: 10px;
+
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.1s;
+
+  &:hover,
+  &:focus {
+    background-color: getColor('hover');
+    transform: scale(1.03);
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-top: 50px;
+
+    max-width: 230px;
+    padding: 12px 10px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-top: 80px;
+
+    max-width: 273px;
+    padding: 25px 8.5px;
+
+    font-size: 20px;
+  }
 }
