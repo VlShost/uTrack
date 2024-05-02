@@ -12,11 +12,11 @@ import tracker_2x from '../../assets/images/stock/trackers/uTrackR3-2x.png';
 import validator_1x from '../../assets/images/stock/validators/mpi-102-1x.png';
 import validator_2x from '../../assets/images/stock/validators/mpi-102-2x.png';
 
-import css from './Stock.module.css';
+import css from './Stock.module.scss';
 
 const Stock = () => {
   return (
-    <section className={css.stock} id="stock">
+    <section id="stock" className={css.section}>
       <div className={css.container}>
         <h2 className={css.title}>Що ми пропонуємо?</h2>
         <Swiper

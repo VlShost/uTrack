@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
-import css from './BurgerMenu.module.css';
+import css from './BurgerMenu.module.scss';
 
 const BurgerMenu = () => {
   return (

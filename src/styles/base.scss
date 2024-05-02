@@ -1,0 +1,24 @@
+// @import 'node_modules/modern-normalize/modern-normalize.css';
+@import './vars';
+@import './utils';
+@import './reset';
+@import '../assets/fonts/fonts.scss';
+
+body {
+  background-color: getColor('body-bg');
+  color: getColor('txt-black');
+
+  font-family: Outfit;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  cursor: pointer;
+}
+
+section {
+  width: 100%;
+  overflow: hidden;
+}

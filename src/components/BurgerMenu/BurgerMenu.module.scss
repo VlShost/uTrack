@@ -12,22 +12,22 @@
   gap: 28px;
 
   border-radius: 10px;
-  background: var(--footer-bg);
+  background: getColor('footer-bg');
 }
 
 .burgerListItem {
-  color: var(--color-text);
+  color: getColor('text');
 
   font-size: 18px;
   font-weight: 600;
 
   &:hover {
-    color: var(--color-hover);
+    color: getColor('hover');
   }
 }
 
 .btnDisabled {
-  color: var(--color-disabled);
+  color: getColor('disabled');
 
   font-size: 18px;
   font-weight: 600;

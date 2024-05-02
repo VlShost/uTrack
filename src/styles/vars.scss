@@ -1,0 +1,42 @@
+$mobile: 375px;
+$tablet: 744px;
+$desktop: 1920px;
+
+$colors: (
+  'body-bg': #f1f1f1,
+  'main': #72b6d3,
+  'text': #f1f1f1,
+  'txt-black': #1a1a18,
+  'accent': #0d6197,
+  'err': #9d0707,
+  'footer-bg': #061b29,
+
+  'hover': #066fb2,
+  'clicked': #05283f,
+  'disabled': #7d7d7d,
+);
+
+$gradients: (
+  'benefits': linear-gradient(180deg, #72b6d3 19%, #004572 86%),
+  'header':
+    linear-gradient(
+      180deg,
+      #080808 0%,
+      rgba(8, 8, 8, 0.86) 23.44%,
+      rgba(8, 8, 8, 0.71) 42.71%,
+      rgba(8, 8, 8, 0.47) 66.67%,
+      rgba(8, 8, 8, 0) 100%
+    ),
+  'hero':
+    linear-gradient(
+      90deg,
+      #090908 4.81%,
+      rgba(8, 8, 8, 0.93) 19.35%,
+      rgba(7, 7, 7, 0.86) 34.41%,
+      rgba(7, 7, 6, 0.78) 47.91%,
+      rgba(6, 6, 5, 0.67) 62.46%,
+      rgba(5, 5, 5, 0.56) 75.44%,
+      rgba(4, 4, 3, 0.43) 87.39%,
+      rgba(2, 2, 2, 0.23) 99.85%
+    ),
+);

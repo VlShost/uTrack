@@ -1,0 +1,55 @@
+@import '../../../styles/utils';
+
+.header {
+  position: fixed;
+  z-index: 2;
+
+  width: 100%;
+  height: 72px;
+
+  @include flexAlign();
+
+  background: getGradient('header');
+}
+
+.container {
+  width: 100%;
+  padding: 0 16px;
+
+  @include flexAlign(flex, space-between);
+}
+
+.navbar {
+  @include flexAlign();
+}
+
+// .contacts {
+//   color: getColor('text');
+//   font-family: Outfit;
+//   font-size: 18px;
+//   font-style: normal;
+//   font-weight: 600;
+//   line-height: normal;
+// }
+
+.burgerBtn {
+  padding: 0;
+
+  @include flexAlign();
+
+  background-color: transparent;
+  border: none;
+
+  transition: transform 0.3s;
+}
+
+.btnIcon {
+  fill: getColor('text');
+
+  &:hover,
+  &:focus {
+    fill: getColor('hover');
+    transform: scale(0.9);
+    transition: 0.3s;
+  }
+}

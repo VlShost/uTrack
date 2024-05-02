@@ -1,26 +1,26 @@
-.stock {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@import '../../styles/utils';
+
+.section {
+  padding: 40px 0 40px 0;
 }
 
 .container {
-  max-width: 343px;
+  padding: 0 16px;
 
-  @media screen and (min-width: 744px) {
-    max-width: 744px;
+  @media screen and (min-width: $tablet) {
+    max-width: $tablet;
   }
-  @media screen and (min-width: 1920px) {
-    max-width: 1462px;
+  @media screen and (min-width: $desktop) {
+    max-width: $desktop;
   }
 }
 
 .title {
-  color: var(--color-txt-black);
+  color: getColor('txt-black');
 
-  text-align: center;
   font-size: 18px;
   font-weight: 600;
+  text-align: center;
 }
 
 .card {
@@ -29,7 +29,7 @@
   margin-top: 12px;
   padding: 30px;
 
-  border: 1px solid var(--color-txt-black);
+  border: 1px solid getColor('txt-black');
   border-radius: 10px;
 }
 
@@ -37,7 +37,7 @@
   width: 283px;
   height: 283px;
 
-  background-color: var(--color-body-bg);
+  background-color: getColor('body-bg');
 }
 
 .infoWrapper {
@@ -51,14 +51,14 @@
 }
 
 .name {
-  color: var(--color-txt-black);
+  color: getColor('txt-black');
 
   font-size: 18px;
   font-weight: 600;
 }
 
 .info {
-  color: var(--color-txt-black);
+  color: getColor('txt-black');
 
   font-size: 14px;
   font-weight: 400;
@@ -71,8 +71,8 @@
   margin-top: 20px;
   padding: 8px 60px;
 
-  color: var(--color-text);
-  background-color: var(--color-accent);
+  color: getColor('text');
+  background-color: getColor('accent');
   border: none;
   border-radius: 10px;
 
@@ -81,9 +81,7 @@
 }
 
 .swiperPagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexAlign();
 
   margin-top: 10px;
   color: red;
@@ -94,8 +92,8 @@
     width: 15px;
     height: 15px;
 
-    background-color: var(--color-text);
-    border: 1px solid var(--color-txt-black);
+    background-color: getColor('text');
+    border: 1px solid getColor('txt-black');
     opacity: 1;
 
     border-radius: 50%;
@@ -105,6 +103,6 @@
     width: 15px;
     height: 15px;
 
-    background-color: var(--color-txt-black);
+    background-color: getColor('txt-black');
   }
 }

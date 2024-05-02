@@ -1,0 +1,15 @@
+@import './vars';
+
+@function getColor($key) {
+  @return map-get($colors, $key);
+}
+
+@function getGradient($key) {
+  @return map-get($gradients, $key);
+}
+
+@mixin flexAlign($type: flex, $main-axis: center, $cross-axis: center) {
+    display: $type;
+    justify-content: $main-axis;
+    align-items: $cross-axis;
+}

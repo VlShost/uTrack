@@ -1,8 +1,8 @@
-import css from './About.module.css';
+import css from './About.module.scss';
 
 const About = () => {
   return (
-    <section id="about" className={css.sectionAbout}>
+    <section id="about" className={css.section}>
       <div className={css.container}>
         <h2 className={css.title}>Про нас</h2>
         <p className={css.text}>

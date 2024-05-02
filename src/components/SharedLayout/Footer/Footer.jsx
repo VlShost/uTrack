@@ -1,4 +1,4 @@
-import css from './Footer.module.css';
+import css from './Footer.module.scss';
 import logo from '../../../assets/logoSmall.svg';
 import { NavLink } from 'react-router-dom';
 

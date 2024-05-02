@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import css from './Hero.module.css';
+import css from './Hero.module.scss';
 import Modal from '../Modal/Modal';
 
 const Hero = () => {
@@ -10,7 +10,7 @@ const Hero = () => {
   };
 
   return (
-    <section className={css.sectionHero}>
+    <section id="hero" className={css.section}>
       <div className={css.container}>
         <h1 className={css.title}>GPS-трекінг нового покоління</h1>
         <p className={css.text}>

@@ -1,9 +1,9 @@
-import css from './Benefits.module.css';
+import css from './Benefits.module.scss';
 // import sprite from '../../assets/images/sprite.svg';
 
 const Benefits = () => {
   return (
-    <section id="benefits">
+    <section id="benefits" className={css.section}>
       <div className={css.container}>
         <h2 className={css.title}>Чому ми найкращі?</h2>
         <ul className={css.list}>
@@ -25,7 +25,7 @@ const Benefits = () => {
           </li>
           <li className={css.listItem}>
             <span className={css.itemNum}>4</span>
-            <p className={css.text}>Робота комплексу відбувається в режимі реального часу</p>
+            <p className={css.text}>444444Робота комплексу відбувається в режимі реального часу</p>
           </li>
         </ul>
       </div>
