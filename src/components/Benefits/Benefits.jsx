@@ -15,7 +15,7 @@ const Benefits = () => {
           </li>
           <li className={css.listItem}>
             <span className={css.itemNum}>2</span>
-            <p className={css.text}>Обладнання власного виробництва високої якості</p>
+            <p className={css.text}>Обладнання високої якості власного виготовлення</p>
           </li>
           <li className={css.listItem}>
             <span className={css.itemNum}>3</span>

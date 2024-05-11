@@ -15,7 +15,7 @@
     height: 115px;
   }
 
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: $laptop-L) {
     height: 140px;
   }
 }
@@ -30,7 +30,7 @@
     padding: 0 40px;
   }
 
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: $laptop-L) {
     padding: 0 80px;
   }
 }
@@ -60,10 +60,16 @@
 .navlist {
   display: none;
 
+  @media screen and (min-width: $laptop-L) {
+    margin-left: 48px;
+
+    display: flex;
+    gap: 48px;
+  }
+
   @media screen and (min-width: $desktop) {
     margin-left: 130px;
 
-    display: flex;
     gap: 60px;
   }
 }
@@ -77,10 +83,21 @@
 .contacts {
   display: none;
 
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: $laptop-L) {
     display: flex;
+    align-items: center;
+    gap: 48px;
+  }
+
+  @media screen and (min-width: $desktop) {
     gap: 90px;
   }
+}
+
+.telBtn {
+  color: getColor('text');
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .burgerBtn {
@@ -93,7 +110,7 @@
 
   transition: transform 0.3s;
 
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: $laptop-L) {
     display: none;
   }
 }

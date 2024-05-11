@@ -21,6 +21,7 @@ const Stock = () => {
         <h2 className={css.title}>Що ми пропонуємо?</h2>
         <Swiper
           grabCursor={true}
+          centeredSlides={true}
           autoplay={{
             delay: 5000,
             disableOnInteraction: false,
@@ -31,48 +32,44 @@ const Stock = () => {
             clickable: true,
           }}
           breakpoints={{
-            375: {
-              slidesPerView: 1,
+            320: {
+              slidesPerView: 'auto',
               loop: true,
               spaceBetween: 24,
             },
-            664: {
+            744: {
               slidesPerView: 2,
               loop: true,
               spaceBetween: 24,
             },
-            1440: {
+            1024: {
               slidesPerView: 3,
               loop: false,
               spaceBetween: 41,
             },
           }}
           keyboard={{ enabled: true }}
-          modules={[Autoplay, Pagination, Keyboard]}
+          modules={[Pagination, Keyboard]}
         >
-          <SwiperSlide>
-            <div className={css.wrapper_card}>
-              <div className={css.card}>
-                <div className={css.img}>
-                  <img
-                    loading="lazy"
-                    className={css.img}
-                    srcSet={`${tracker_1x} 1x, ${tracker_2x} 2x`}
-                    src={tracker_1x}
-                    alt="Трекер"
-                  />
-                </div>
-
-                <div className={css.infoWrapper}>
-                  <p className={css.name}>Термінали пропускного доступу (валідатори)</p>
-                  <p className={css.info}>
-                    Запобігання безквиткового проїзду в корпоративному або громадському транспорті
-                  </p>
-                </div>
-
-                <button className={css.btn}>Дізнатися більше</button>
-              </div>
+          <SwiperSlide className={css.card}>
+            <div className={css.img}>
+              <img
+                loading="lazy"
+                className={css.img}
+                srcSet={`${tracker_1x} 1x, ${tracker_2x} 2x`}
+                src={tracker_1x}
+                alt="Трекер"
+              />
             </div>
+
+            <div className={css.infoWrapper}>
+              <p className={css.name}>GPS-трекери для всіх видів транспорту</p>
+              <p className={css.info}>
+                Живлення від прикурювача або в умовах стаціонарного підключення до автомобіля
+              </p>
+            </div>
+
+            <button className={css.btn}>Дізнатися більше</button>
           </SwiperSlide>
           <SwiperSlide>
             <div className={css.wrapper_card}>
@@ -88,9 +85,9 @@ const Stock = () => {
                 </div>
 
                 <div className={css.infoWrapper}>
-                  <p className={css.name}>GPS-трекери для всіх видів транспорту</p>
+                  <p className={css.name}>Термінали пропускного доступу (валідатори)</p>
                   <p className={css.info}>
-                    Живлення від прикурювача або в умовах стаціонарного підключення до автомобіля
+                    Запобігання безквиткового проїзду в корпоративному або громадському транспорті
                   </p>
                 </div>
 

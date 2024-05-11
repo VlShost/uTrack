@@ -68,7 +68,7 @@ const Header = () => {
         </nav>
 
         <div className={css.contacts}>
-          <NavLink to="tel:+38 050 345 14 15" className={css.navlistItem}>
+          <NavLink to="tel:+38 050 345 14 15" className={css.telBtn}>
             +38 (050) 345 14 15
           </NavLink>
 

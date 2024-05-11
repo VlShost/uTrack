@@ -1,7 +1,19 @@
 @import '../../styles/utils';
 
 .section {
-  padding: 40px 0 40px 0;
+  padding: 40px 0;
+
+  @media screen and (min-width: $tablet) {
+    padding: 50px 0;
+  }
+
+  @media screen and (min-width: $laptop) {
+    padding: 40px 0;
+  }
+
+  @media screen and (min-width: $laptop-L) {
+    padding: 75px 0;
+  }
 }
 
 .container {
@@ -9,10 +21,15 @@
   padding: 0 16px;
 
   @media screen and (min-width: $tablet) {
-    max-width: $tablet;
+    padding: 0 40px;
   }
+
+  @media screen and (min-width: $laptop) {
+    padding: 0 80px;
+  }
+
   @media screen and (min-width: $desktop) {
-    max-width: $desktop;
+    padding: 0 230px;
   }
 }
 
@@ -22,10 +39,18 @@
   font-size: 18px;
   font-weight: 600;
   text-align: center;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 24px;
+  }
+
+  @media screen and (min-width: $laptop) {
+    font-size: 32px;
+  }
 }
 
 .card {
-  max-width: 343px;
+  width: 100%;
 
   margin-top: 12px;
   padding: 30px;
@@ -35,8 +60,8 @@
 }
 
 .img {
-  width: 283px;
-  height: 283px;
+  // width: 283px;
+  // height: 283px;
 
   background-color: getColor('body-bg');
 }
@@ -48,6 +73,8 @@
 
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 12px;
 }
 
@@ -66,11 +93,10 @@
 }
 
 .btn {
-  width: 283px;
-  height: 40px;
+  width: 100%;
 
   margin-top: 20px;
-  padding: 8px 60px;
+  padding: 8px;
 
   color: getColor('text');
   background-color: getColor('accent');

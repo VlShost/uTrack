@@ -2,6 +2,18 @@
 
 .section {
   padding: 80px 0 40px 0;
+
+  @media screen and (min-width: $tablet) {
+    padding: 100px 0 50px 0;
+  }
+
+  @media screen and (min-width: $laptop) {
+    padding: 80px 0 40px 0;
+  }
+
+  @media screen and (min-width: $laptop-L) {
+    padding: 150px 0 75px 0;
+  }
 }
 
 .container {
@@ -9,10 +21,15 @@
   padding: 0 16px;
 
   @media screen and (min-width: $tablet) {
-    max-width: $tablet;
+    padding: 0 40px;
   }
+
+  @media screen and (min-width: $laptop) {
+    padding: 0 80px;
+  }
+
   @media screen and (min-width: $desktop) {
-    max-width: $desktop;
+    padding: 0 230px;
   }
 }
 
@@ -22,6 +39,26 @@
   font-size: 18px;
   font-weight: 600;
   text-align: center;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 24px;
+  }
+
+  @media screen and (min-width: $laptop) {
+    font-size: 32px;
+  }
+}
+
+.textWrapper {
+  margin-top: 16px;
+
+  @media screen and (min-width: $tablet) {
+    margin-top: 40px;
+  }
+
+  @media screen and (min-width: $laptop) {
+    margin-top: 32px;
+  }
 }
 
 .text {
@@ -30,10 +67,58 @@
   color: getColor('txt-black');
 
   text-align: justify;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-top: 24px;
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: $laptop) {
+    margin-top: 0;
+    font-size: 18px;
+  }
 }
 
 .textSpan {
   color: getColor('txt-black');
 
   font-weight: 600;
+}
+
+.decor {
+  display: none;
+
+  @media screen and (min-width: $tablet) {
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 664px;
+    height: 161px;
+
+    display: block;
+  }
+
+  @media screen and (min-width: $laptop) {
+    margin-top: 32px;
+
+    width: 864px;
+    height: 210px;
+  }
+
+  @media screen and (min-width: $laptop-L) {
+    margin-top: 60px;
+
+    width: 1166px;
+    height: 305px;
+  }
+}
+
+.svg {
+  width: inherit;
+  height: inherit;
 }

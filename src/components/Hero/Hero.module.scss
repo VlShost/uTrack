@@ -1,7 +1,7 @@
 @import '../../styles/utils';
 
 .section {
-  padding: 152px 0 120px 0;
+  padding: 152px 0 120px;
 
   background-image: getGradient('hero'), url(../../assets/images/hero/hero-mob1x.jpeg);
   background-position: center;
@@ -12,8 +12,8 @@
     background-image: getGradient('hero'), url(../../assets/images/hero/hero-mob2x.jpeg);
   }
 
-  @media screen and (min-width: $mobile) {
-    padding: 155px 0 70px0;
+  @media screen and (min-width: $tablet) {
+    padding: 155px 0 70px;
 
     background-image: getGradient('hero'), url(../../assets/images/hero/hero-tabl2x.jpeg);
 
@@ -22,8 +22,16 @@
     }
   }
 
-  @media screen and (min-width: $tablet) {
-    padding: 259px 0 234px 0;
+  @media screen and (min-width: $laptop) {
+    padding: 215px 0 150px;
+  }
+
+  @media screen and (min-width: $laptop-L) {
+    padding: 252px 0 240px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 260px 0 235px;
 
     background-image: getGradient('hero'), url(../../assets/images/hero/hero-desk2x.jpeg);
 
@@ -45,6 +53,10 @@
     align-items: flex-start;
   }
 
+  @media screen and (min-width: $laptop) {
+    padding: 0 80px;
+  }
+
   @media screen and (min-width: $desktop) {
     padding: 0 230px;
   }
@@ -62,7 +74,7 @@
     margin: 0;
   }
 
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: $laptop) {
     max-width: 868px;
 
     margin: 0;
@@ -87,11 +99,12 @@
     max-width: 435px;
   }
 
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: $laptop) {
     max-width: 720px;
 
     margin-top: 60px;
 
+    font-weight: 600;
     font-size: 32px;
   }
 }
@@ -125,7 +138,7 @@
     padding: 12px 10px;
   }
 
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: $laptop) {
     margin-top: 80px;
 
     max-width: 273px;
