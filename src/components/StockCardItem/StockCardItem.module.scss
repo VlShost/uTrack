@@ -2,6 +2,7 @@
 
 .card {
   width: 265px;
+  min-height: 475px;
 
   margin-top: 12px;
   padding: 30px 10px;
@@ -14,19 +15,24 @@
   }
 
   @media screen and (min-width: $tablet) {
+    margin-top: 40px;
     padding: 30px 35px;
   }
 
   @media screen and (min-width: $laptop) {
+    width: 280px;
     padding: 30px 16px;
   }
 
   @media screen and (min-width: $laptop-L) {
-    padding: 60px 35px;
+    width: 410px;
+    margin-top: 57px;
+    padding: 60px 55px;
   }
 
   @media screen and (min-width: $desktop) {
-    padding: 60px;
+    // width: 460px;
+    padding: 60px 80px;
   }
 }
 
@@ -37,6 +43,11 @@
   margin: 0 auto;
 
   background-color: getColor('body-bg');
+
+  @media screen and (min-width: $desktop) {
+    max-width: 300px;
+    max-height: 300px;
+  }
 }
 
 .infoWrapper {
@@ -78,6 +89,10 @@
 
   font-size: 18px;
   font-weight: 600;
+
+  @media screen and (min-width: $laptop-L) {
+    height: 77px;
+  }
 }
 
 // .card {
