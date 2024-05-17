@@ -17,18 +17,27 @@
 }
 
 .container {
+  max-width: 320px;
   margin: 0 auto;
   padding: 0 16px;
 
   @media screen and (min-width: $tablet) {
+    max-width: $tablet;
     padding: 0 40px;
   }
 
   @media screen and (min-width: $laptop) {
+    max-width: $laptop;
+    padding: 0 80px;
+  }
+
+  @media screen and (min-width: $laptop-L) {
+    max-width: $laptop-L;
     padding: 0 80px;
   }
 
   @media screen and (min-width: $desktop) {
+    // max-width: $desktop;
     padding: 0 230px;
   }
 }
@@ -49,62 +58,9 @@
   }
 }
 
-.card {
-  width: 100%;
-
-  margin-top: 12px;
-  padding: 30px;
-
-  border: 1px solid getColor('txt-black');
-  border-radius: 10px;
-}
-
-.img {
-  // width: 283px;
-  // height: 283px;
-
-  background-color: getColor('body-bg');
-}
-
-.infoWrapper {
-  width: 283px;
-
-  margin-top: 16px;
-
+.slide {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  gap: 12px;
-}
-
-.name {
-  color: getColor('txt-black');
-
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.info {
-  color: getColor('txt-black');
-
-  font-size: 14px;
-  font-weight: 400;
-}
-
-.btn {
-  width: 100%;
-
-  margin-top: 20px;
-  padding: 8px;
-
-  color: getColor('text');
-  background-color: getColor('accent');
-  border: none;
-  border-radius: 10px;
-
-  font-size: 18px;
-  font-weight: 600;
 }
 
 .swiperPagination {
