@@ -1,0 +1,90 @@
+@import '../../styles/utils';
+
+.section {
+  padding: 40px 0;
+
+  @media screen and (min-width: $tablet) {
+    padding: 50px 0;
+  }
+
+  @media screen and (min-width: $laptop) {
+    padding: 40px 0;
+  }
+
+  @media screen and (min-width: $laptop-L) {
+    padding: 75px 0;
+  }
+}
+
+.container {
+  // max-width: 320px;
+  margin: 0 auto;
+  padding: 0 16px;
+
+  @media screen and (min-width: $tablet) {
+    max-width: $tablet;
+    padding: 0 40px;
+  }
+
+  @media screen and (min-width: $laptop) {
+    max-width: $laptop;
+    padding: 0 80px;
+  }
+
+  @media screen and (min-width: $laptop-L) {
+    max-width: $laptop-L;
+    padding: 0 80px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    // max-width: $desktop;
+    padding: 0 230px;
+  }
+}
+
+.title {
+  color: getColor('txt-black');
+
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 24px;
+  }
+
+  @media screen and (min-width: $laptop) {
+    font-size: 32px;
+  }
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+}
+
+.swiperPagination {
+  @include flexAlign();
+
+  margin-top: 10px;
+}
+
+.swiperPagination {
+  :global(.swiper-pagination-bullet) {
+    width: 15px;
+    height: 15px;
+
+    background-color: getColor('text');
+    border: 1px solid getColor('txt-black');
+    opacity: 1;
+
+    border-radius: 50%;
+  }
+
+  :global(.swiper-pagination-bullet-active) {
+    width: 15px;
+    height: 15px;
+
+    background-color: getColor('txt-black');
+  }
+}

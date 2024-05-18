@@ -2,10 +2,8 @@
 
 .card {
   width: 265px;
-  // min-height: 475px;
 
-  margin-top: 12px;
-  padding: 30px 10px;
+  padding: 30px 17px;
 
   border: 1px solid getColor('txt-black');
   border-radius: 10px;
@@ -15,7 +13,6 @@
   }
 
   @media screen and (min-width: $tablet) {
-    margin-top: 40px;
     padding: 30px 35px;
   }
 
@@ -26,7 +23,6 @@
 
   @media screen and (min-width: $laptop-L) {
     width: 410px;
-    margin-top: 57px;
     padding: 60px 35px;
   }
 
@@ -35,29 +31,22 @@
   }
 }
 
-.imgWrapper {
-  max-width: 283px;
-  max-height: 283px;
-
+.infoWrapper {
   margin: 0 auto;
 
-  background-color: getColor('body-bg');
-
-  @media screen and (min-width: $desktop) {
-    max-width: 300px;
-    max-height: 300px;
-  }
-}
-
-.infoWrapper {
-  margin: 16px auto 0;
-
   @include flexAlign();
-  flex-direction: column;
   gap: 12px;
 }
 
-.name {
+.imgWrapper {
+  width: 55px;
+  height: 55px;
+
+  background-color: getColor('avatar-bg');
+  border-radius: 50%;
+}
+
+.company {
   color: getColor('txt-black');
 
   font-size: 18px;
@@ -72,7 +61,16 @@
   }
 }
 
-.info {
+.date {
+  margin-left: auto;
+
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.text {
+  margin-top: 20px;
+
   color: getColor('txt-black');
 
   font-size: 14px;
@@ -88,36 +86,26 @@
   }
 }
 
-.btn {
-  width: 100%;
+.userRating {
+  margin-top: 20px;
 
-  margin: 20px auto 0;
-  padding: 8px;
+  display: flex;
+  gap: 2px;
+}
 
-  display: block;
+.star {
+  // width: 44px;
+  // height: 40px;
+  color: getColor('accent');
+}
 
-  color: getColor('text');
-  background-color: getColor('accent');
-  border: none;
-  border-radius: 10px;
-
-  font-size: 18px;
-  font-weight: 500;
-
-  @media screen and (min-width: $tablet) {
-    font-size: 16px;
-  }
-
-  @media screen and (min-width: $laptop) {
-    margin-top: 16px;
-  }
-
-  @media screen and (min-width: $laptop-L) {
-    max-width: 273px;
-
-    margin-top: 30px;
-    padding: 20px 55px;
-
-    font-size: 20px;
-  }
+.filled {
+  width: 44px;
+  height: 40px;
+  fill: getColor('accent');
+}
+.unfilled {
+  width: 44px;
+  height: 40px;
+  // fill: getColor('body-bg');
 }

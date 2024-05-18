@@ -1,5 +1,5 @@
 // import { useState, useEffect } from 'react';
-import { Pagination, Keyboard } from 'swiper/modules';
+import { Pagination, Keyboard, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/scss';
 import 'swiper/scss/pagination';
@@ -21,27 +21,52 @@ import validator_2x from '../../assets/images/stock/validators/mpi-102-2x.png';
 
 import css from './Stock.module.scss';
 
+const stock = [
+  {
+    images: {
+      x1: tracker_1x,
+      x2: tracker_2x,
+    },
+    imageAlt: 'Трекер',
+    name: 'GPS-трекери для всіх видів транспорту',
+    info: 'Живлення від прикурювача або в умовах стаціонарного підключення до автомобіля',
+    details: {
+      name: 'uTrack R3',
+      info: 'bla bla',
+      price: 1960,
+    },
+  },
+  {
+    images: {
+      x1: validator_1x,
+      x2: validator_2x,
+    },
+    imageAlt: 'Валідатор',
+    name: 'Термінали пропускного доступу (валідатори)',
+    info: 'Запобігання безквиткового проїзду в корпоративному або громадському транспорті',
+    details: {
+      name: 'uTrack R3',
+      info: 'bla bla',
+      price: 1960,
+    },
+  },
+  {
+    images: {
+      x1: polls_1x,
+      x2: polls_2x,
+    },
+    imageAlt: 'ДРП',
+    name: 'Робота з датчиками контролю рівня палива',
+    info: 'Встановлення, калібрування та обслуговування обладнання контролю рівня палива',
+    details: {
+      name: 'uTrack R3',
+      info: 'bla bla',
+      price: 1960,
+    },
+  },
+];
+
 const Stock = () => {
-  const stock = [
-    {
-      image1x: tracker_1x,
-      image2x: tracker_2x,
-      name: 'GPS - трекери для всіх видів транспорту',
-      info: 'Живлення від прикурювача або в умовах стаціонарного підключення до автомобіля',
-    },
-    {
-      image1x: validator_1x,
-      image2x: validator_2x,
-      name: 'Термінали пропускного доступу (валідатори)',
-      info: 'Запобігання безквиткового проїзду в корпоративному або громадському транспорті',
-    },
-    {
-      image1x: polls_1x,
-      image2x: polls_2x,
-      name: 'Робота з датчиками контролю рівня палива',
-      info: 'Встановлення, калібрування та обслуговування обладнання контролю рівня палива',
-    },
-  ];
   // const [stock, setStock] = useState([]);
 
   // useEffect(() => {
@@ -55,7 +80,7 @@ const Stock = () => {
       <div className={css.container}>
         <h2 className={css.title}>Що ми пропонуємо?</h2>
         <Swiper
-          modules={[Pagination, Keyboard]}
+          modules={[Pagination, Keyboard, Autoplay]}
           grabCursor={true}
           keyboard={{ enabled: true }}
           centeredSlides={true}
@@ -67,8 +92,9 @@ const Stock = () => {
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
           }}
+          speed={1500}
           pagination={{
-            el: '#swiperPagination',
+            el: '#swiperStockPagination',
             clickable: true,
           }}
           breakpoints={{
@@ -87,7 +113,6 @@ const Stock = () => {
             1440: {
               slidesPerView: 3,
               centeredSlides: false,
-              // loop: false,
               spaceBetween: 24,
             },
           }}
@@ -99,7 +124,7 @@ const Stock = () => {
           ))}
         </Swiper>
 
-        <div className={css.swiperPagination} id="swiperPagination"></div>
+        <div className={css.swiperPagination} id="swiperStockPagination"></div>
       </div>
     </section>
   );
