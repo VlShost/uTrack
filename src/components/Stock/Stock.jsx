@@ -81,6 +81,7 @@ const Stock = () => {
         <h2 className={css.title}>Що ми пропонуємо?</h2>
         <Swiper
           modules={[Pagination, Keyboard, Autoplay]}
+          className={css.swiper}
           grabCursor={true}
           keyboard={{ enabled: true }}
           centeredSlides={true}

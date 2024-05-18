@@ -43,11 +43,12 @@ const Reviews = () => {
   // }, []);
 
   return (
-    <section id="reviews">
+    <section id="reviews" className={css.section}>
       <div className={css.container}>
         <h2 className={css.title}>Відгуки наших постійних клієнтів</h2>
         <Swiper
           modules={[Pagination, Keyboard, Autoplay]}
+          className={css.swiper}
           grabCursor={true}
           keyboard={{ enabled: true }}
           centeredSlides={true}
@@ -66,13 +67,13 @@ const Reviews = () => {
           }}
           breakpoints={{
             744: {
-              slidesPerView: 2,
+              slidesPerView: 1,
               centeredSlides: false,
               loop: true,
               spaceBetween: 10,
             },
             1024: {
-              slidesPerView: 3,
+              slidesPerView: 2,
               centeredSlides: false,
               loop: false,
               spaceBetween: 10,

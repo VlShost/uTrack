@@ -58,6 +58,23 @@
   }
 }
 
+.swiper {
+  margin-top: 16px;
+
+  @media screen and (min-width: $tablet) {
+    margin-top: 38px;
+  }
+  @media screen and (min-width: $laptop) {
+    margin-top: 32px;
+  }
+  @media screen and (min-width: $laptop-L) {
+    margin-top: 67px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-top: 57px;
+  }
+}
+
 .slide {
   display: flex;
   justify-content: center;

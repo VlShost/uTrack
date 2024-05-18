@@ -13,21 +13,19 @@
   }
 
   @media screen and (min-width: $tablet) {
-    padding: 30px 35px;
+    width: 435px;
+
+    padding: 30px;
   }
 
   @media screen and (min-width: $laptop) {
-    width: 280px;
-    padding: 30px 16px;
-  }
-
-  @media screen and (min-width: $laptop-L) {
     width: 410px;
-    padding: 60px 35px;
+
+    padding: 24px;
   }
 
   @media screen and (min-width: $desktop) {
-    padding: 60px;
+    padding: 30px;
   }
 }
 
@@ -53,7 +51,7 @@
   font-weight: 600;
 
   @media screen and (min-width: $tablet) {
-    font-size: 20px;
+    font-size: 24px;
   }
 
   @media screen and (min-width: $laptop-L) {
@@ -66,6 +64,10 @@
 
   font-size: 18px;
   font-weight: 600;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 20px;
+  }
 }
 
 .text {
@@ -91,21 +93,4 @@
 
   display: flex;
   gap: 2px;
-}
-
-.star {
-  // width: 44px;
-  // height: 40px;
-  color: getColor('accent');
-}
-
-.filled {
-  width: 44px;
-  height: 40px;
-  fill: getColor('accent');
-}
-.unfilled {
-  width: 44px;
-  height: 40px;
-  // fill: getColor('body-bg');
 }
