@@ -1,0 +1,55 @@
+@import '../../styles/utils';
+
+.title {
+  @include title();
+}
+
+.inputWrapper {
+  margin-top: 16px;
+}
+
+.input {
+  width: 100%;
+
+  padding: 15px 12px;
+
+  border: 2px solid getColor('txt-black');
+  border-radius: 10px;
+
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.btnSubmit {
+  width: 100%;
+
+  margin: 20px auto 0;
+  padding: 8px;
+
+  display: block;
+
+  color: getColor('text');
+  background-color: getColor('accent');
+  border: none;
+  border-radius: 10px;
+
+  font-size: 18px;
+  font-weight: 500;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: $laptop) {
+    // margin-top: 16px;
+  }
+
+  @media screen and (min-width: $laptop-L) {
+    max-width: 273px;
+
+    // margin-top: 30px;
+    padding: 20px 55px;
+
+    font-size: 20px;
+  }
+}

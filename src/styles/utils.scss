@@ -56,3 +56,19 @@
     padding: 0 230px;
   }
 }
+
+@mixin title() {
+  color: getColor('txt-black');
+
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 24px;
+  }
+
+  @media screen and (min-width: $laptop) {
+    font-size: 32px;
+  }
+}
