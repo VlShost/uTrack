@@ -7,7 +7,7 @@ const Form = () => {
         Заповніть коротку форму і ми зв’яжемося з Вами для відповіді на будь-які питання
       </h2>
 
-      <form name="callback-form">
+      <form name="callback-form" className={css.form}>
         <div className={css.inputWrapper}>
           <label className={css.label}>
             <input type="text" name="user-name" placeholder="Ім’я" className={css.input} />

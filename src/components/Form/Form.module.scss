@@ -4,27 +4,58 @@
   @include title();
 }
 
-.inputWrapper {
+.form {
   margin-top: 16px;
+
+  @media screen and (min-width: $tablet) {
+    margin-top: 40px;
+  }
+
+  @media screen and (min-width: $laptop-L) {
+    margin-top: 60px;
+  }
+}
+
+.inputWrapper {
+  max-width: 570px;
+
+  margin: 16px auto 0;
+
+  &:first-child {
+    margin-top: 0;
+  }
 }
 
 .input {
   width: 100%;
 
+  margin: 0 auto;
   padding: 15px 12px;
 
   border: 2px solid getColor('txt-black');
   border-radius: 10px;
+  outline: none;
 
   font-size: 14px;
   font-weight: 400;
+
+  transition:
+    fill 2500ms,
+    border-color 250ms;
+
+  &:focus {
+    border-color: getColor('hover');
+  }
+  &:focus + .modal-icon {
+    fill: getColor('hover');
+  }
 }
 
 .btnSubmit {
   width: 100%;
 
   margin: 20px auto 0;
-  padding: 8px;
+  padding: 10px;
 
   display: block;
 
@@ -33,23 +64,31 @@
   border: none;
   border-radius: 10px;
 
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
 
+  transition: 0.1s;
+  &:hover,
+  &:focus {
+    background-color: getColor('hover');
+    transform: scale(1.03);
+  }
+
   @media screen and (min-width: $tablet) {
-    font-size: 16px;
+    max-width: 230px;
+
+    margin-top: 40px;
   }
 
   @media screen and (min-width: $laptop) {
-    // margin-top: 16px;
+    max-width: 273px;
+
+    padding: 25px;
+
+    font-size: 20px;
   }
 
   @media screen and (min-width: $laptop-L) {
-    max-width: 273px;
-
-    // margin-top: 30px;
     padding: 20px 55px;
-
-    font-size: 20px;
   }
 }

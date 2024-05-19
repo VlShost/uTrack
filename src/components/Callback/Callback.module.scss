@@ -6,4 +6,23 @@
 
 .container {
   @include container();
+
+  @media screen and (min-width: $laptop) {
+    background-image: url(../../assets/images/form-decor-small.svg);
+    background-position: 75px 75px;
+    background-repeat: no-repeat;
+    background-size: 85%;
+  }
+
+  @media screen and (min-width: $laptop-L) {
+    background-image: url(../../assets/images/form-decor-medium.svg);
+    background-position: 150px 75px;
+    background-size: 80%;
+  }
+
+  @media screen and (min-width: $desktop) {
+    background-image: url(../../assets/images/form-decor-big.svg);
+    background-position: 250px 55px;
+    background-size: 75%;
+  }
 }

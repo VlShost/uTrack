@@ -127,16 +127,16 @@
   }
 
   @media screen and (min-width: $tablet) {
-    margin-top: 50px;
-
     max-width: 230px;
+
+    margin-top: 50px;
     padding: 12px 10px;
   }
 
   @media screen and (min-width: $laptop) {
-    margin-top: 80px;
-
     max-width: 273px;
+
+    margin-top: 80px;
     padding: 25px 8.5px;
 
     font-size: 20px;
