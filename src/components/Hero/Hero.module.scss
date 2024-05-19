@@ -3,63 +3,58 @@
 .section {
   padding: 152px 0 120px;
 
-  background-image: getGradient('hero'), url(../../assets/images/hero/hero-mob1x.jpeg);
+  background-image: url(../../assets/images/hero/hero-mob1x.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-    background-image: getGradient('hero'), url(../../assets/images/hero/hero-mob2x.jpeg);
+    background-image: url(../../assets/images/hero/hero-mob2x.jpg);
   }
 
   @media screen and (min-width: $tablet) {
     padding: 155px 0 70px;
 
-    background-image: getGradient('hero'), url(../../assets/images/hero/hero-tabl2x.jpeg);
+    background-image: url(../../assets/images/hero/hero-tabl1x.jpg);
 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: getGradient('hero'), url(../../assets/images/hero/hero-tabl2x.jpeg);
+      background-image: url(../../assets/images/hero/hero-tabl2x.jpg);
     }
   }
 
   @media screen and (min-width: $laptop) {
     padding: 215px 0 150px;
+
+    background-image: url(../../assets/images/hero/hero-lap1x.jpg);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../../assets/images/hero/hero-lap2x.jpg);
+    }
   }
 
   @media screen and (min-width: $laptop-L) {
     padding: 252px 0 240px;
+
+    background-image: url(../../assets/images/hero/hero-lapl1x.jpg);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../../assets/images/hero/hero-lapl2x.jpg);
+    }
   }
 
   @media screen and (min-width: $desktop) {
     padding: 260px 0 235px;
 
-    background-image: getGradient('hero'), url(../../assets/images/hero/hero-desk2x.jpeg);
+    background-image: url(../../assets/images/hero/hero-desk1x.jpg);
 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: getGradient('hero'), url(../../assets/images/hero/hero-desk2x.jpeg);
+      background-image: url(../../assets/images/hero/hero-desk2x.jpg);
     }
   }
 }
 
 .container {
-  margin: 0 auto;
-  padding: 0 16px;
-
-  @media screen and (min-width: $tablet) {
-    padding: 0 40px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  @media screen and (min-width: $laptop) {
-    padding: 0 80px;
-  }
-
-  @media screen and (min-width: $desktop) {
-    padding: 0 230px;
-  }
+  @include container();
 }
 
 .title {

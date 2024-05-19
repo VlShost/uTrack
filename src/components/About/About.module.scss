@@ -1,36 +1,24 @@
 @import '../../styles/utils';
 
 .section {
-  padding: 80px 0 40px 0;
+  @include section();
+  padding-top: 80px;
 
   @media screen and (min-width: $tablet) {
-    padding: 100px 0 50px 0;
+    padding-top: 100px;
   }
 
   @media screen and (min-width: $laptop) {
-    padding: 80px 0 40px 0;
+    padding-top: 80px;
   }
 
   @media screen and (min-width: $laptop-L) {
-    padding: 150px 0 75px 0;
+    padding-top: 150px;
   }
 }
 
 .container {
-  margin: 0 auto;
-  padding: 0 16px;
-
-  @media screen and (min-width: $tablet) {
-    padding: 0 40px;
-  }
-
-  @media screen and (min-width: $laptop) {
-    padding: 0 80px;
-  }
-
-  @media screen and (min-width: $desktop) {
-    padding: 0 230px;
-  }
+  @include container();
 }
 
 .title {

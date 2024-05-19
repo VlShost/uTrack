@@ -9,7 +9,50 @@
 }
 
 @mixin flexAlign($type: flex, $main-axis: center, $cross-axis: center) {
-    display: $type;
-    justify-content: $main-axis;
-    align-items: $cross-axis;
+  display: $type;
+  justify-content: $main-axis;
+  align-items: $cross-axis;
+}
+
+@mixin section() {
+  padding: 40px 0;
+
+  @media screen and (min-width: $tablet) {
+    padding: 50px 0;
+  }
+
+  @media screen and (min-width: $laptop) {
+    padding: 40px 0;
+  }
+
+  @media screen and (min-width: $laptop-L) {
+    padding: 75px 0;
+  }
+}
+
+@mixin container() {
+  margin: 0 auto;
+  padding: 0 16px;
+
+  @media screen and (min-width: $tablet) {
+    max-width: $tablet;
+
+    padding: 0 40px;
+  }
+
+  @media screen and (min-width: $laptop) {
+    max-width: $laptop;
+
+    padding: 0 80px;
+  }
+
+  @media screen and (min-width: $laptop-L) {
+    max-width: $laptop-L;
+  }
+
+  @media screen and (min-width: $desktop) {
+    max-width: $desktop;
+
+    padding: 0 230px;
+  }
 }
