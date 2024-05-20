@@ -3,9 +3,7 @@ import css from './Form.module.scss';
 const Form = () => {
   return (
     <>
-      <h2 className={css.title}>
-        Заповніть коротку форму і ми зв’яжемося з Вами для відповіді на будь-які питання
-      </h2>
+
 
       <form name="callback-form" className={css.form}>
         <div className={css.inputWrapper}>

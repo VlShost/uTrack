@@ -1,9 +1,5 @@
 @import '../../styles/utils';
 
-.title {
-  @include title();
-}
-
 .form {
   margin-top: 16px;
 
@@ -49,6 +45,10 @@
   &:focus + .modal-icon {
     fill: getColor('hover');
   }
+
+  @media screen and (min-width: $tablet) {
+    font-size: 16px;
+  }
 }
 
 .btnSubmit {
@@ -81,7 +81,7 @@
   }
 
   @media screen and (min-width: $laptop) {
-    max-width: 273px;
+    max-width: 280px;
 
     padding: 25px;
 

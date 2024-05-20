@@ -26,3 +26,7 @@
     background-size: 75%;
   }
 }
+
+.title {
+  @include title();
+}
