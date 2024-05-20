@@ -1,7 +1,7 @@
 [
   {
     "images": {
-      "1x": "tracker_1x",
+      "1x": "./images/stock/trackers/uTrackR3-1x.png",
       "2x": "tracker_2x"
     },
     "imageAlt": "Трекер",

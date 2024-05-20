@@ -1,9 +1,9 @@
 import axios from 'axios';
 
 const baseUrl = 'https://utrack.com.ua';
-const stockUrl = '/landing/stock.json';
-const reviewsUrl = '/landing/reviews.json';
-const descrUrl = '/landing/description.json';
+const stockUrl = '/data/stock.json';
+const reviewsUrl = '/data/reviews.json';
+const descrUrl = '/data/description.json';
 
 export const getDescr = async () => {
   const res = await axios.get(`${baseUrl}${descrUrl}`);
