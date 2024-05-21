@@ -1,0 +1,81 @@
+@import '../../styles/utils';
+
+.detailsModal {
+  max-height: 90vh;
+
+  margin: 0 auto;
+
+  overflow: auto;
+
+  // @media screen and (min-width: $tablet) {
+  //   padding: 30px 35px;
+  // }
+
+  // @media screen and (min-width: $laptop) {
+  //   padding: 28px 16px;
+  // }
+
+  // @media screen and (min-width: $laptop-L) {
+  //   padding: 60px 35px;
+  // }
+
+  // @media screen and (min-width: $desktop) {
+  //   padding: 60px;
+  // }
+}
+
+.imgWrapper {
+  max-width: 283px;
+  max-height: 283px;
+
+  margin: 0 auto;
+
+  background-color: getColor('body-bg');
+  border: 2px solid getColor('img-border');
+  border-radius: 10px;
+
+  @media screen and (min-width: $desktop) {
+    max-width: 300px;
+    max-height: 300px;
+  }
+}
+
+.infoWrapper {
+  margin: 16px auto 0;
+
+  @include flexAlign();
+  flex-direction: column;
+  gap: 12px;
+}
+
+.name {
+  color: getColor('txt-black');
+
+  font-size: 18px;
+  font-weight: 600;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 20px;
+  }
+
+  @media screen and (min-width: $laptop-L) {
+    font-size: 24px;
+  }
+}
+
+.info {
+  text-align: start;
+  color: getColor('txt-black');
+
+  font-size: 14px;
+  font-weight: 400;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  @media screen and (min-width: $laptop-L) {
+    font-size: 18px;
+  }
+}

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import cross from '../../assets/images/cross.svg';
+
 import Modal from '../Modal';
 import Form from '../Form';
 
@@ -25,11 +25,6 @@ const Hero = () => {
       </div>
       {isModalOpen && (
         <Modal toggleModal={toggleModal}>
-          <button type="button" className={css.btnCloseModal} onClick={toggleModal}>
-            <svg width={15} height={15}>
-              <image xlinkHref={cross} />
-            </svg>
-          </button>
           <h2 className={css.titleModal}>
             Заповніть коротку форму і ми зв’яжемося з Вами для відповіді на будь-які питання
           </h2>

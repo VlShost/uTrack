@@ -151,18 +151,3 @@
   }
 }
 
-.btnCloseModal {
-  position: absolute;
-  right: 8px;
-  top: 8px;
-
-  background-color: transparent;
-  border: none;
-
-  transition: 0.2s;
-
-  &:hover,
-  &:focus {
-    transform: scale(1.1) rotate(360deg);
-  }
-}

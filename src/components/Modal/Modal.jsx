@@ -1,6 +1,8 @@
 import { createPortal } from 'react-dom';
 import { useEffect } from 'react';
 
+import cross from '../../assets/images/cross.svg';
+
 import css from './Modal.module.scss';
 
 const modalRoot = document.querySelector('#modal-root');
@@ -29,9 +31,12 @@ const Modal = ({ children, toggleModal }) => {
   return createPortal(
     <div className={css.modalBackdrop} onClick={handleBackdropClick}>
       <div className={css.modal}>
-        <div className={css.modalContent}>
-          <>{children}</>
-        </div>
+        <button type="button" className={css.btnCloseModal} onClick={toggleModal}>
+          <svg width={15} height={15}>
+            <image xlinkHref={cross} />
+          </svg>
+        </button>
+        <div className={css.modalContent}>{children}</div>
       </div>
     </div>,
     modalRoot
