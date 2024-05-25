@@ -6,34 +6,48 @@ const StockDetails = ({ data, images }) => {
 
   return (
     <div className={css.detailsModal}>
-      <span className={css.name}>{name}</span>
-      <div className={css.imgWrapper}>
-        <img loading="lazy" srcSet={`${x1} 1x, ${x2} 2x`} src={x1} alt={alt} />
-      </div>
-      <span className={css.info}>{price}</span>
+      {name && <span className={css.name}>{name}</span>}
 
-      <div className={css.infoWrapper}>
-        <span>Опис</span>
-        <p className={css.info}>{info}</p>
+      {images && (
+        <div className={css.imgWrapper}>
+          <img loading="lazy" srcSet={`${x1} 1x, ${x2} 2x`} src={x1} alt={alt} />
+        </div>
+      )}
 
-        <span>Характеристики</span>
-        <ul>
-          {characteristics.map((item) => (
-            <li key={item} className={css.info}>
-              {item}
-            </li>
-          ))}
-        </ul>
+      {price && <span className={css.info}>{price}</span>}
 
-        <span>Комплект постачання</span>
-        <ol>
-          {supply.map((item) => (
-            <li key={item} className={css.info}>
-              {item}
-            </li>
-          ))}
-        </ol>
-      </div>
+      {info && (
+        <div className={css.infoWrapper}>
+          <span>Опис</span>
+          <p className={css.info}>{info}</p>
+        </div>
+      )}
+
+      {characteristics && (
+        <div className={css.characteristicsWrapper}>
+          <span>Характеристики</span>
+          <ul>
+            {characteristics.map((item) => (
+              <li key={item} className={css.info}>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {supply && (
+        <div className={css.supplyWrapper}>
+          <span>Комплект постачання</span>
+          <ol>
+            {supply.map((item) => (
+              <li key={item} className={css.info}>
+                {item}
+              </li>
+            ))}
+          </ol>
+        </div>
+      )}
     </div>
   );
 };

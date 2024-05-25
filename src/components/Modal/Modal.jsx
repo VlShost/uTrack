@@ -32,9 +32,7 @@ const Modal = ({ children, toggleModal }) => {
     <div className={css.modalBackdrop} onClick={handleBackdropClick}>
       <div className={css.modal}>
         <button type="button" className={css.btnCloseModal} onClick={toggleModal}>
-          <svg width={15} height={15}>
-            <image xlinkHref={cross} />
-          </svg>
+          <img src={cross} alt="Close" />
         </button>
         <div className={css.modalContent}>{children}</div>
       </div>

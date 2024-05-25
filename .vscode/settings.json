@@ -1,4 +1,15 @@
 {
-  "cSpell.words": ["lapl", "navlist", "stockdetails", "utrack", "зв’яжемося", "роз’єм", "Шері"],
+  "cSpell.words": [
+    "lapl",
+    "navlist",
+    "nofollow",
+    "noopener",
+    "noreferrer",
+    "stockdetails",
+    "utrack",
+    "зв’яжемося",
+    "роз’єм",
+    "Шері"
+  ],
   "vsicons.presets.angular": true
 }

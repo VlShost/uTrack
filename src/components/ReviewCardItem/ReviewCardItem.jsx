@@ -16,13 +16,11 @@ const CardItem = ({ data }) => {
 
       <div className={css.userRating}>
         {Array.from({ length: 5 }, (_, i) => (
-          <svg key={i} width={44} height={40}>
-            {i < rating ? (
-              <use xlinkHref={`${starFilled}#star`} />
-            ) : (
-              <use xlinkHref={`${starUnfilled}#star`} />
-            )}
-          </svg>
+          <img
+            src={i < rating ? `${starFilled}#star` : `${starUnfilled}#star`}
+            alt="Star"
+            key={i}
+          />
         ))}
       </div>
     </div>

@@ -26,7 +26,7 @@ const StockCardItem = ({ data }) => {
       </div>
 
       <div className={css.infoWrapper}>
-        <p className={css.name}>{name}</p>
+        <span className={css.name}>{name}</span>
         <p className={css.info}>{info}</p>
       </div>
 

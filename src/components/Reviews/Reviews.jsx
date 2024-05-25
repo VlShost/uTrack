@@ -9,31 +9,11 @@ import 'swiper/scss/virtual';
 import ReviewCardItem from '../ReviewCardItem';
 
 // import { getReviews } from '../../services/fetchData';
+import reviews from '../../data/reviews.json';
 
 import css from './Reviews.module.scss';
 
 const Reviews = () => {
-  const reviews = [
-    {
-      date: '25.09.22',
-      company: 'Шері',
-      text: 'Відмінна робота працівників служби підтримки! Відповідають на будь-які питання, завжди оперативно реагують та інформують.',
-      rating: 2,
-    },
-    {
-      date: '25.09.22',
-      company: 'Шері',
-      text: 'Відмінна робота працівників служби підтримки! Відповідають на будь-які питання, завжди оперативно реагують та інформують.',
-      rating: 5,
-    },
-    {
-      date: '25.09.22',
-      company: 'Шері',
-      text: 'Відмінна робота працівників служби підтримки! Відповідають на будь-які питання, завжди оперативно реагують та інформують.',
-      rating: 3,
-    },
-  ];
-
   // const [reviews, setReviews] = useState([]);
 
   // useEffect(() => {
@@ -56,7 +36,7 @@ const Reviews = () => {
           slidesPerView={1}
           spaceBetween={34}
           autoplay={{
-            delay: 5000000,
+            delay: 7000,
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
           }}
