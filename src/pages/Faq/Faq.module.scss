@@ -1,0 +1,112 @@
+@import '../../styles/utils.scss';
+
+.section {
+  min-height: 100vh;
+
+  padding: 130px 0 80px;
+
+  @media screen and (min-width: $tablet) {
+    padding: 160px 0 80px;
+  }
+
+  @media screen and (min-width: $laptop) {
+    padding: 170px 0 100px;
+  }
+
+  @media screen and (min-width: $laptop-L) {
+    padding: 200px 0 150px;
+  }
+}
+
+.container {
+  @include container();
+}
+
+.title {
+  @include title();
+}
+
+.list {
+  margin-top: 24px;
+
+  @media screen and (min-width: $tablet) {
+    margin-top: 36px;
+  }
+
+  @media screen and (min-width: $laptop) {
+    margin-top: 40px;
+  }
+}
+
+.listItem {
+  margin-top: 24px;
+
+  @media screen and (min-width: $laptop) {
+    margin-top: 36px;
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.listItem.visible {
+  border-radius: 12px;
+}
+
+.question {
+  padding: 12px;
+
+  background-color: getColor('question-bg');
+
+  border: 2px solid getColor('txt-black');
+  border-top: 0;
+  border-left: 0;
+  border-radius: 10px;
+  box-shadow: 3px 5px 8px 0px #00000040;
+
+  font-size: 16px;
+  font-weight: 400;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  @media screen and (min-width: $laptop) {
+    font-size: 24px;
+  }
+}
+
+.answer {
+  width: 95%;
+
+  margin: 0 auto;
+  padding: 12px;
+
+  display: none;
+
+  background-color: getColor('answer-bg');
+  border: 2px solid getColor('img-border');
+  border-top: 0;
+  border-left: 0;
+  border-radius: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+
+  font-size: 14px;
+  font-weight: 350;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  @media screen and (min-width: $laptop) {
+    font-size: 18px;
+  }
+}
+
+.answer.visible {
+  display: block;
+}

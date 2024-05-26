@@ -1,0 +1,96 @@
+@import '../../styles/utils';
+
+.card {
+  width: 265px;
+
+  padding: 30px 17px;
+
+  border: 1px solid getColor('txt-black');
+  border-radius: 10px;
+
+  @media screen and (min-width: $mobile) {
+    padding: 30px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 435px;
+
+    padding: 30px;
+  }
+
+  @media screen and (min-width: $laptop) {
+    width: 410px;
+
+    padding: 24px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 30px;
+  }
+}
+
+.infoWrapper {
+  margin: 0 auto;
+
+  @include flexAlign();
+  gap: 12px;
+}
+
+.imgWrapper {
+  width: 55px;
+  height: 55px;
+
+  background-color: getColor('avatar-bg');
+  border-radius: 50%;
+}
+
+.company {
+  color: getColor('txt-black');
+
+  font-size: 18px;
+  font-weight: 600;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 24px;
+  }
+
+  @media screen and (min-width: $laptop-L) {
+    font-size: 24px;
+  }
+}
+
+.date {
+  margin-left: auto;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 20px;
+  }
+}
+
+.text {
+  margin-top: 20px;
+
+  color: getColor('txt-black');
+
+  font-size: 14px;
+  font-weight: 400;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  @media screen and (min-width: $laptop-L) {
+    font-size: 18px;
+  }
+}
+
+.userRating {
+  margin-top: 20px;
+
+  display: flex;
+  gap: 2px;
+}

@@ -4,6 +4,7 @@ const baseUrl = 'https://utrack.com.ua';
 const stockUrl = '/data/stock.json';
 const reviewsUrl = '/data/reviews.json';
 const descrUrl = '/data/description.json';
+const questionsUrl = '/data/questions.json';
 
 export const getDescr = async () => {
   const res = await axios.get(`${baseUrl}${descrUrl}`);
@@ -17,5 +18,10 @@ export const getStock = async () => {
 
 export const getReviews = async () => {
   const res = await axios.get(`${baseUrl}${reviewsUrl}`);
+  return res;
+};
+
+export const getQuestions = async () => {
+  const res = await axios.get(`${baseUrl}${questionsUrl}`);
   return res;
 };
