@@ -1,4 +1,5 @@
 import svg from '../../assets/images/decoration.svg';
+
 import css from './About.module.scss';
 
 const About = () => {

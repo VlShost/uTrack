@@ -1,5 +1,4 @@
 import { useState } from 'react';
-// import QuestionItem from '../../components/QuestionItem/QuestionItem';
 
 // import { getQuestions } from '../../services/fetchData';
 import questions from '../../data/questions.json';
@@ -35,7 +34,7 @@ const Faq = () => {
             <li
               key={i}
               onClick={() => showQuestion(i)}
-              className={`${css.listItem} ${visible === i && css.visible}`}
+              className={css.listItem}
             >
               <div className={css.card}>
                 <div className={css.question}>{item.question}</div>

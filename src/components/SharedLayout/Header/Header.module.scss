@@ -40,20 +40,27 @@
 }
 
 .logo {
-  width: 90px;
-
-  @media screen and (min-width: $tablet) {
-    width: 120px;
-  }
-
-  @media screen and (min-width: $desktop) {
-    width: 145px;
-  }
+  width: fit-content;
 
   &:hover,
   &:focus {
     transform: scale(1.1);
     transition: 0.3s;
+  }
+}
+
+.logoImg {
+  width: 58px;
+  height: 36px;
+
+  @media screen and (min-width: $tablet) {
+    width: 96px;
+    height: 60px;
+  }
+
+  @media screen and (min-width: $laptop) {
+    width: 156px;
+    height: 60px;
   }
 }
 
@@ -76,8 +83,22 @@
 
 .navlistItem {
   color: getColor('text');
+
   font-size: 18px;
   font-weight: 600;
+}
+
+.toHome {
+  margin-left: 40px;
+
+  color: getColor('text');
+
+  font-size: 18px;
+  font-weight: 600;
+
+  @media screen and (min-width: $desktop) {
+    margin-left: 130px;
+  }
 }
 
 .contacts {
