@@ -32,25 +32,28 @@
 
   transform: translate(-50%, -50%);
 
-  @media (min-width: $mobile) {
-    width: 350px;
-  }
+  // @media (min-width: $mobile) {
+  //   width: 350px;
+  // }
 
-  @media (min-width: $tablet) {
-    width: 480px;
+  // @media (min-width: $tablet) {
+  //   width: 480px;
 
-    padding: 20px 16px;
-  }
+  //   padding: 20px 16px;
+  // }
 
-  @media (min-width: $laptop) {
-    width: 480px;
-  }
+  // @media (min-width: $laptop) {
+  //   width: 480px;
+  // }
 }
 
 .btnCloseModal {
   position: absolute;
   right: 8px;
   top: 8px;
+
+  width: 15px;
+  height: 15px;
 
   background-color: transparent;
   border: none;
@@ -61,6 +64,11 @@
   &:focus {
     transform: scale(1.1) rotate(360deg);
   }
+}
+
+.btnIcon {
+  width: 15px;
+  height: 15px;
 }
 
 .modalContent {

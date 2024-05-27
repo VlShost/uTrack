@@ -1,7 +1,7 @@
-import { createPortal } from 'react-dom';
 import { useEffect } from 'react';
+import { createPortal } from 'react-dom';
 
-import cross from '../../assets/images/cross.svg';
+import svg from '../../assets/images/sprite.svg';
 
 import css from './Modal.module.scss';
 
@@ -22,9 +22,11 @@ const Modal = ({ children, toggleModal }) => {
     };
 
     window.addEventListener('keydown', handleKeyDown);
+    document.body.style.overflow = 'hidden';
 
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = '';
     };
   }, [toggleModal]);
 
@@ -32,7 +34,9 @@ const Modal = ({ children, toggleModal }) => {
     <div className={css.modalBackdrop} onClick={handleBackdropClick}>
       <div className={css.modal}>
         <button type="button" className={css.btnCloseModal} onClick={toggleModal}>
-          <img src={cross} alt="Close" />
+          <svg className={css.btnIcon}>
+            <use href={svg + '#cross'}></use>
+          </svg>
         </button>
         <div className={css.modalContent}>{children}</div>
       </div>

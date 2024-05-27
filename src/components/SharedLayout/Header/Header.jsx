@@ -11,11 +11,8 @@ import css from './Header.module.scss';
 
 const Header = () => {
   const [burgerVisible, setBurgerVisible] = useState(false);
-  const [currLocation, setCurrLocation] = useState('/');
   const location = useLocation();
   const btnRef = useRef();
-
-  console.log(location.pathname);
 
   const toggleBurger = () => {
     setBurgerVisible((prev) => !prev);

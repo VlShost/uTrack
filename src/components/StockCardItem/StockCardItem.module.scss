@@ -47,6 +47,20 @@
   }
 }
 
+.placeholderWrapper {
+  @include flexAlign();
+  width: 100%;
+  height: 100%;
+
+  background-color: getColor('body-bg');
+  border: 2px solid #fff;
+  border-radius: 10px;
+}
+
+.imgPlaceholder {
+  width: 50px;
+}
+
 .infoWrapper {
   margin: 16px auto 0;
 
@@ -101,6 +115,14 @@
 
   font-size: 18px;
   font-weight: 500;
+
+  transition: 0.1s;
+
+  &:hover,
+  &:focus {
+    background-color: getColor('hover');
+    transform: scale(1.03);
+  }
 
   @media screen and (min-width: $tablet) {
     font-size: 16px;

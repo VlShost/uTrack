@@ -6,60 +6,129 @@
   margin: 0 auto;
 
   overflow: auto;
+
+  @media screen and (min-width: $tablet) {
+    width: 700px;
+
+    padding: 20px 20px;
+  }
 }
 
 .imgWrapper {
-  max-width: 283px;
-  max-height: 283px;
+  width: 180px;
+  height: 180px;
 
-  margin: 0 auto;
+  margin: 12px auto 0;
 
   background-color: getColor('body-bg');
   border: 2px solid getColor('img-border');
   border-radius: 10px;
 
-  @media screen and (min-width: $desktop) {
-    max-width: 300px;
-    max-height: 300px;
+  @media screen and (min-width: $tablet) {
+    float: left;
+
+    margin-right: 12px;
+    margin-bottom: 12px;
+  }
+
+  @media screen and (min-width: $laptop) {
+    width: 280px;
+    height: 280px;
   }
 }
 
-.infoWrapper {
-  margin: 16px auto 0;
+.img {
+  width: 100%;
+}
 
+.placeholderWrapper {
   @include flexAlign();
-  flex-direction: column;
-  gap: 12px;
+  width: 100%;
+  height: 100%;
+
+  background-color: getColor('body-bg');
+  border-radius: 10px;
+}
+
+.imgPlaceholder {
+  width: 50px;
 }
 
 .name {
+  margin-top: 12px;
+
   color: getColor('txt-black');
 
   font-size: 18px;
   font-weight: 600;
 
   @media screen and (min-width: $tablet) {
+    margin-top: 0;
+
+    font-size: 24px;
+  }
+
+  @media screen and (min-width: $laptop) {
+    font-size: 32px;
+  }
+}
+
+.price {
+  margin-top: 12px;
+
+  font-size: 24px;
+  font-weight: 600;
+  text-align: end;
+
+  color: getColor('accent');
+
+  @media screen and (min-width: $tablet) {
+    font-size: 30px;
+    text-align: start;
+  }
+}
+
+.moreInfoWrapper {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    gap: 100px;
+  }
+}
+
+.infoWrapper {
+  margin: 12px auto 0;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+
+  @media screen and (min-width: $tablet) {
     font-size: 20px;
   }
 
-  @media screen and (min-width: $laptop-L) {
+  @media screen and (min-width: $laptop) {
     font-size: 24px;
   }
 }
 
+.orderedListItem {
+  display: list-item;
+  list-style-position: inside;
+  list-style-type: decimal;
+}
+
 .info {
-  text-align: start;
+  margin-top: 8px;
   color: getColor('txt-black');
 
   font-size: 14px;
   font-weight: 400;
+  text-align: start;
 
   @media screen and (min-width: $tablet) {
-    font-size: 16px;
-    font-weight: 600;
-  }
+    margin-top: 12px;
 
-  @media screen and (min-width: $laptop-L) {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
