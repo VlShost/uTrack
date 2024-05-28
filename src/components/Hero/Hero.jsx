@@ -25,10 +25,12 @@ const Hero = () => {
       </div>
       {isModalOpen && (
         <Modal toggleModal={toggleModal}>
-          <h2 className={css.titleModal}>
-            Заповніть коротку форму і ми зв’яжемося з Вами для відповіді на будь-які питання
-          </h2>
-          <Form />
+          <div className={css.formWrapper}>
+            <h2 className={css.titleModal}>
+              Заповніть коротку форму і ми зв’яжемося з Вами для відповіді на будь-які питання
+            </h2>
+            <Form />
+          </div>
         </Modal>
       )}
     </section>

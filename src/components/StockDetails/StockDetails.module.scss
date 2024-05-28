@@ -7,10 +7,14 @@
 
   overflow: auto;
 
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: $tablet) and (max-width: $laptop-L) {
     width: 700px;
 
     padding: 20px 20px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 1000px;
   }
 }
 

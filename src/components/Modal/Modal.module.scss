@@ -32,19 +32,15 @@
 
   transform: translate(-50%, -50%);
 
-  // @media (min-width: $mobile) {
-  //   width: 350px;
-  // }
+  @media (min-width: $mobile) {
+    width: 350px;
+  }
 
-  // @media (min-width: $tablet) {
-  //   width: 480px;
+  @media (min-width: $tablet) {
+    width: fit-content;
 
-  //   padding: 20px 16px;
-  // }
-
-  // @media (min-width: $laptop) {
-  //   width: 480px;
-  // }
+    padding: 20px 16px;
+  }
 }
 
 .btnCloseModal {

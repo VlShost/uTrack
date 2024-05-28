@@ -36,7 +36,7 @@ const Stock = () => {
           slidesPerView={1}
           spaceBetween={34}
           autoplay={{
-            delay: 5000000,
+            delay: 5000,
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
           }}

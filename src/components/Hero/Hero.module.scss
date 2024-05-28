@@ -143,6 +143,12 @@
   }
 }
 
+.formWrapper {
+  @media screen and (min-width: $laptop) {
+    max-width: 480px;
+  }
+}
+
 .titleModal {
   @include title();
 
@@ -150,4 +156,3 @@
     font-size: 28px;
   }
 }
-

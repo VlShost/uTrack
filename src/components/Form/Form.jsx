@@ -3,8 +3,6 @@ import css from './Form.module.scss';
 const Form = () => {
   return (
     <>
-
-
       <form name="callback-form" className={css.form}>
         <div className={css.inputWrapper}>
           <label className={css.label}>
