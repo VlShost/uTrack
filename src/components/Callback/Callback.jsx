@@ -1,4 +1,4 @@
-import Form from '../Form';
+import CallbackForm from '../CallbackForm';
 import css from './Callback.module.scss';
 
 const Callback = () => {
@@ -8,7 +8,7 @@ const Callback = () => {
         <h2 className={css.title}>
           Заповніть коротку форму і ми зв’яжемося з Вами для відповіді на будь-які питання
         </h2>
-        <Form />
+        <CallbackForm />
       </div>
     </section>
   );

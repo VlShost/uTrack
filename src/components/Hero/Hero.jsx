@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import Modal from '../Modal';
-import Form from '../Form';
+import CallbackForm from '../CallbackForm';
 
 import css from './Hero.module.scss';
 
@@ -29,7 +29,7 @@ const Hero = () => {
             <h2 className={css.titleModal}>
               Заповніть коротку форму і ми зв’яжемося з Вами для відповіді на будь-які питання
             </h2>
-            <Form />
+            <CallbackForm />
           </div>
         </Modal>
       )}

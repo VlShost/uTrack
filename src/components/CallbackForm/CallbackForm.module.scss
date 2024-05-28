@@ -51,6 +51,14 @@
   }
 }
 
+.error {
+  border-color: getColor('error');
+}
+
+.validationMessage {
+  color: getColor('error');
+}
+
 .btnSubmit {
   width: 100%;
 
