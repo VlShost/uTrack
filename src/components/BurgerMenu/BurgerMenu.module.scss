@@ -28,14 +28,31 @@
   font-size: 18px;
   font-weight: 600;
 
+  transition: 0.1s;
+
   &:hover {
     color: getColor('hover');
   }
 }
 
-.btnDisabled {
-  color: getColor('disabled');
+.divider {
+  width: 70px;
 
-  font-size: 18px;
-  font-weight: 600;
+  margin: -10px auto;
+
+  border: 0;
+  border-top: 2px solid getColor('accent');
+}
+
+.monitoringBtn {
+  @include flexAlign();
+}
+
+.icon {
+  width: 35px;
+  height: 35px;
+
+  margin-left: 12px;
+
+  color: currentColor;
 }

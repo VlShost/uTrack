@@ -82,19 +82,34 @@
 }
 
 .navlistItem {
+  @include flexAlign();
+
   color: getColor('text');
 
   font-size: 18px;
   font-weight: 600;
+
+  &:hover,
+  &:focus {
+    // color: getColor('hover');
+    transform: scale(1.1);
+    transition: 0.3s;
+  }
 }
 
 .toHome {
-  margin-left: 40px;
+  display: none;
 
-  color: getColor('text');
+  @media screen and (min-width: $laptop-L) {
+    display: block;
 
-  font-size: 18px;
-  font-weight: 600;
+    margin-left: 40px;
+
+    color: getColor('text');
+
+    font-size: 18px;
+    font-weight: 600;
+  }
 
   @media screen and (min-width: $desktop) {
     margin-left: 130px;
@@ -116,12 +131,22 @@
 }
 
 .telBtn {
-  color: getColor('text');
   font-size: 16px;
-  font-weight: 600;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+
+  margin-right: 20px;
+
+  color: currentColor;
 }
 
 .burgerBtn {
+  width: 40px;
+  height: 40px;
+
   padding: 0;
 
   @include flexAlign();
@@ -136,12 +161,25 @@
   }
 }
 
+.backBtn {
+  @media screen and (min-width: $laptop-L) {
+    display: none;
+  }
+}
+
+.backIcon {
+  width: 35px;
+  height: 35px;
+}
+
 .btnIcon {
-  fill: getColor('text');
+  width: 40px;
+  height: 40px;
+
+  color: getColor('text');
 
   &:hover,
   &:focus {
-    fill: getColor('hover');
     transform: scale(1.1);
     transition: 0.3s;
   }

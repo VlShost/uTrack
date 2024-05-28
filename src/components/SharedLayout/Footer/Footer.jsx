@@ -33,6 +33,7 @@ const Footer = () => {
                 +38 (050) 345 14 15
               </a>
             </li>
+
             <li className={css.item}>
               <a
                 className={css.itemLink}
@@ -46,6 +47,7 @@ const Footer = () => {
                 scat.gps@gmail.com
               </a>
             </li>
+
             <li className={css.item}>
               <a className={css.itemLink} href="viber://chat?number=%2B380503451415">
                 <svg className={css.img}>
@@ -54,6 +56,7 @@ const Footer = () => {
                 Viber
               </a>
             </li>
+
             <li className={css.item}>
               <a className={css.itemLink} href="https://t.me/@scatGPS">
                 <svg className={css.img}>

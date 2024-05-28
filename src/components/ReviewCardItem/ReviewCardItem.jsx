@@ -1,5 +1,4 @@
-import starUnfilled from '../../assets/images/star-unfilled.svg';
-import starFilled from '../../assets/images/star-filled.svg';
+import svg from '../../assets/images/sprite.svg';
 
 import css from './ReviewCardItem.module.scss';
 
@@ -16,11 +15,9 @@ const CardItem = ({ data }) => {
 
       <div className={css.userRating}>
         {Array.from({ length: 5 }, (_, i) => (
-          <img
-            src={i < rating ? `${starFilled}#star` : `${starUnfilled}#star`}
-            alt="Star"
-            key={i}
-          />
+          <svg key={i} className={css.icon}>
+            <use href={i < rating ? `${svg}#star-filled` : `${svg}#star-unfilled`}></use>
+          </svg>
         ))}
       </div>
     </div>

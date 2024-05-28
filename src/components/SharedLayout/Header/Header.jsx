@@ -5,7 +5,7 @@ import BurgerMenu from '../../BurgerMenu/BurgerMenu';
 
 import logo from '../../../assets/images/logo.svg';
 import logoSmall from '../../../assets/images/logo-small.svg';
-import burger from '../../../assets/images/burgerMenu.svg';
+import svg from '../../../assets/images/sprite.svg';
 
 import css from './Header.module.scss';
 
@@ -31,6 +31,10 @@ const Header = () => {
       document.body.removeEventListener('click', closeDropdown);
     };
   }, []);
+
+  useEffect(() => {
+    setBurgerVisible(false);
+  }, [location]);
 
   return (
     <header className={css.header}>
@@ -80,25 +84,43 @@ const Header = () => {
             </ul>
           )}
           {location.pathname === '/faq' && (
-            <NavLink to="/" className={css.toHome}>
+            <NavLink to="/" className={`${css.toHome} ${css.navlistItem}`}>
               На головну
             </NavLink>
           )}
         </nav>
 
         <div className={css.contacts}>
-          <NavLink to="tel:+38 050 345 14 15" className={css.telBtn}>
+          <NavLink to="tel:+38 050 345 14 15" className={`${css.telBtn} ${css.navlistItem}`}>
+            <svg className={css.icon}>
+              <use href={svg + '#phone'}></use>
+            </svg>
             +38 (050) 345 14 15
           </NavLink>
 
           <NavLink to="https://app.utrack.com.ua/" className={css.navlistItem}>
+            <svg className={css.icon}>
+              <use href={svg + '#location'}></use>
+            </svg>
             Моніторинг
           </NavLink>
         </div>
 
-        <button ref={btnRef} onClick={toggleBurger} className={css.burgerBtn}>
-          <img src={burger} alt="menuBtn" className={css.btnIcon} />
-        </button>
+        {location.pathname === '/' && (
+          <button ref={btnRef} onClick={toggleBurger} className={css.burgerBtn}>
+            <svg className={css.btnIcon}>
+              <use href={svg + '#burgerMenu'}></use>
+            </svg>
+          </button>
+        )}
+
+        {location.pathname === '/faq' && (
+          <NavLink to="/" className={`${css.backBtn} ${css.navlistItem}`}>
+            <svg className={`${css.btnIcon} ${css.backIcon}`}>
+              <use href={svg + '#back'}></use>
+            </svg>
+          </NavLink>
+        )}
 
         {burgerVisible && <BurgerMenu />}
       </div>

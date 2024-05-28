@@ -1,6 +1,8 @@
 import { NavLink } from 'react-router-dom';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
+import svg from '../../assets/images/sprite.svg';
+
 import css from './BurgerMenu.module.scss';
 
 const BurgerMenu = () => {
@@ -28,18 +30,27 @@ const BurgerMenu = () => {
           </AnchorLink>
         </li>
         <li>
-          <NavLink to="/" className={css.btnDisabled}>
+          <NavLink to="/faq" className={css.burgerListItem}>
             Часті питання
           </NavLink>
         </li>
-        <li>
-          <NavLink to="https://app.utrack.com.ua/" className={css.burgerListItem}>
-            Моніторинг
-          </NavLink>
-        </li>
+
+        <hr className={css.divider} />
+
         <li>
           <NavLink to="tel:+38 050 345 14 15" className={css.burgerListItem}>
             +38 (050) 345 14 15
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="https://app.utrack.com.ua/"
+            className={`${css.burgerListItem} ${css.monitoringBtn}`}
+          >
+            Моніторинг
+            <svg className={css.icon}>
+              <use href={svg + '#location'}></use>
+            </svg>
           </NavLink>
         </li>
       </ul>
