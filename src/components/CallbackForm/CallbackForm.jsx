@@ -6,9 +6,9 @@ const validateName = (value) => {
   let errorMessage;
 
   if (!value) {
-    errorMessage = 'Name is required';
+    errorMessage = 'Обов’язкове поле';
   } else if (value.length < 2) {
-    errorMessage = 'Name is too short';
+    errorMessage = 'Ім’я закоротке';
   }
 
   return errorMessage;
@@ -18,9 +18,9 @@ const validateTel = (value) => {
   let errorMessage;
 
   if (!value) {
-    errorMessage = 'Phone number is required';
+    errorMessage = 'Обов’язкове поле';
   } else if (!/^\+?\d{10,15}$/.test(value)) {
-    errorMessage = 'Invalid phone number';
+    errorMessage = 'Невірний формат номеру';
   }
 
   return errorMessage;
@@ -30,9 +30,9 @@ const validateEmail = (value) => {
   let errorMessage;
 
   if (!value) {
-    errorMessage = 'Email is required';
+    errorMessage = 'Обов’язкове поле';
   } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)) {
-    errorMessage = 'Invalid email address';
+    errorMessage = 'Невірний формат електронної пошти';
   }
 
   return errorMessage;
