@@ -107,7 +107,7 @@ const CallbackForm = () => {
                 as="textarea"
                 name="comment"
                 placeholder="Ваше питання"
-                className={css.input}
+                className={`${css.input} ${css.textArea}`}
                 rows="5"
               ></Field>
             </label>

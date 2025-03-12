@@ -1,4 +1,4 @@
-// import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Pagination, Keyboard, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/scss';
@@ -8,19 +8,19 @@ import 'swiper/scss/virtual';
 
 import ReviewCardItem from '../ReviewCardItem';
 
-// import { getReviews } from '../../services/fetchData';
-import reviews from '../../data/reviews.json';
+import { getReviews } from '../../services/fetchData';
+// import reviews from '../../data/reviews.json';
 
 import css from './Reviews.module.scss';
 
 const Reviews = () => {
-  // const [reviews, setReviews] = useState([]);
+  const [reviews, setReviews] = useState([]);
 
-  // useEffect(() => {
-  //   getReviews().then((data) => {
-  //     setReviews(data.results);
-  //   });
-  // }, []);
+  useEffect(() => {
+    getReviews().then((data) => {
+      setReviews(data.results);
+    });
+  }, []);
 
   return (
     <section id="reviews" className={css.section}>
@@ -65,11 +65,12 @@ const Reviews = () => {
             },
           }}
         >
-          {reviews.map((card, i) => (
-            <SwiperSlide key={i} className={css.slide}>
-              <ReviewCardItem data={card} />
-            </SwiperSlide>
-          ))}
+          {reviews &&
+            reviews.map((card, i) => (
+              <SwiperSlide key={i} className={css.slide}>
+                <ReviewCardItem data={card} />
+              </SwiperSlide>
+            ))}
         </Swiper>
 
         <div className={css.swiperPagination} id="swiperReviewPagination"></div>

@@ -59,6 +59,10 @@
   color: getColor('error');
 }
 
+.textArea {
+  resize: none;
+}
+
 .btnSubmit {
   width: 100%;
 

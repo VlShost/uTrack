@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { MagnifyingGlass } from 'react-loader-spinner';
 import { Pagination, Keyboard, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -8,24 +9,26 @@ import 'swiper/scss/virtual';
 
 import StockCardItem from '../StockCardItem';
 
-// import { getStock } from '../../services/fetchData';
-import stock from '../../data/stock.json';
+import { getStock } from '../../services/fetchData';
 
 import css from './Stock.module.scss';
 
 const Stock = () => {
-  // const [stock, setStock] = useState([]);
+  const [stock, setStock] = useState([]);
 
-  // useEffect(() => {
-  //   getStock().then((data) => {
-  //     setStock(data.results);
-  //   });
-  // }, []);
+  useEffect(() => {
+    getStock().then((data) => {
+      setStock(data.results);
+    });
+  }, []);
+
+  console.log('stock:', stock);
 
   return (
     <section id="stock" className={css.section}>
       <div className={css.container}>
         <h2 className={css.title}>Що ми пропонуємо?</h2>
+
         <Swiper
           modules={[Pagination, Keyboard, Autoplay]}
           className={css.swiper}
@@ -74,12 +77,20 @@ const Stock = () => {
                 wrapperClass={css.spinner}
               />
             ))}
-          {stock &&
+          {stock ? (
             stock.map((card, i) => (
               <SwiperSlide key={i} className={css.slide}>
                 <StockCardItem data={card} />
               </SwiperSlide>
-            ))}
+            ))
+          ) : (
+            <MagnifyingGlass
+              ariaLabel="magnifying-glass-loading"
+              glassColor="#c0efff"
+              color="#0D6197"
+              wrapperClass={css.spinner}
+            />
+          )}
         </Swiper>
 
         <div className={css.swiperPagination} id="swiperStockPagination"></div>

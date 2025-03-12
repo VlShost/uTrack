@@ -41,6 +41,8 @@
 .listItem {
   margin-top: 24px;
 
+  cursor: pointer;
+
   @media screen and (min-width: $laptop) {
     margin-top: 36px;
   }
