@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import { getQuestions } from '../../services/fetchData';
+import data from '@data/questions.json';
 
 import css from './Faq.module.scss';
 
@@ -9,9 +9,7 @@ const Faq = () => {
   const [questions, setQuestions] = useState([]);
 
   useEffect(() => {
-    getQuestions().then((data) => {
-      setQuestions(data.results);
-    });
+    setQuestions(data);
   }, []);
 
   const showQuestion = (i) => {
