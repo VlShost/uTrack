@@ -1,8 +1,8 @@
 [
   {
     "images": {
-      "x1": "src/assets/images/stock/trackers/uTrackR3-1x.png",
-      "x2": "src/assets/images/stock/trackers/uTrackR3-2x.png",
+      "x1": "images/stock/trackers/uTrackR3-1x.png",
+      "x2": "images/stock/trackers/uTrackR3-2x.png",
       "alt": "Трекер"
     },
     "name": "GPS-трекери для всіх видів транспорту",
@@ -26,8 +26,8 @@
   },
   {
     "images": {
-      "x1": "src/assets/images/stock/validators/mpi-102-1x.png",
-      "x2": "src/assets/images/stock/validators/mpi-102-2x.png",
+      "x1": "images/stock/validators/mpi-102-1x.png",
+      "x2": "images/stock/validators/mpi-102-2x.png",
       "alt": "Валідатор"
     },
     "name": "Термінали пропускного доступу (валідатори)",
@@ -42,8 +42,8 @@
   },
   {
     "images": {
-      "x1": "src/assets/images/stock/polls/sensor-1x.png",
-      "x2": "src/assets/images/stock/polls/sensor-2x.png",
+      "x1": "images/stock/polls/sensor-1x.png",
+      "x2": "images/stock/polls/sensor-2x.png",
       "alt": "ДРП"
     },
     "name": "Робота з датчиками контролю рівня палива",
