@@ -6,10 +6,9 @@ import 'swiper/scss/pagination';
 import 'swiper/scss/keyboard';
 import 'swiper/scss/virtual';
 
-import ReviewCardItem from '../ReviewCardItem';
+import data from '@data/reviews.json';
 
-import { getReviews } from '../../services/fetchData';
-// import reviews from '../../data/reviews.json';
+import ReviewCardItem from '../ReviewCardItem';
 
 import css from './Reviews.module.scss';
 
@@ -17,9 +16,7 @@ const Reviews = () => {
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
-    getReviews().then((data) => {
-      setReviews(data.results);
-    });
+    setReviews(data);
   }, []);
 
   return (
