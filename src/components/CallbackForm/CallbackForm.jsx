@@ -1,4 +1,5 @@
 import { Field, Form, Formik } from 'formik';
+import emailjs from 'emailjs-com';
 
 import css from './CallbackForm.module.scss';
 
@@ -39,6 +40,27 @@ const validateEmail = (value) => {
 };
 
 const CallbackForm = () => {
+  const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+  const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+  const sendEmail = (values, actions) => {
+    emailjs
+      .send(serviceId, templateId, values, publicKey)
+      .then(
+        (response) => {
+          console.log('SUCCESS!', response.status, response.text);
+          alert('Ваш запит надіслано!');
+          actions.resetForm();
+        },
+        (error) => {
+          console.log('FAILED...', error);
+          alert('Помилка відправлення, спробуйте ще раз.');
+        }
+      )
+      .finally(() => actions.setSubmitting(false));
+  };
+
   return (
     <Formik
       initialValues={{
@@ -47,12 +69,7 @@ const CallbackForm = () => {
         email: '',
         comment: '',
       }}
-      onSubmit={(values, actions) => {
-        setTimeout(() => {
-          alert(JSON.stringify(values, null, 2));
-          actions.setSubmitting(false);
-        }, 1000);
-      }}
+      onSubmit={sendEmail}
     >
       {({ errors, touched }) => (
         <Form name="callback-form" autoComplete="off" className={css.form}>
