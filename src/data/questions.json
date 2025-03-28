@@ -1,18 +1,22 @@
 [
   {
-    "question": "Lorem ipsum dolor sit amet consectetur. Fames vivamus dignissim praesent luctus. Eros orci quam cras eget. Semper sagittis ultricies sed purus volutpat. Massa elit viverra lectus at et.",
-    "answer": "Lorem ipsum dolor sit amet consectetur. A tincidunt sit diam nunc fames adipiscing nisl. Tincidunt ultricies aliquet pellentesque netus. Purus tellus tempus dignissim sem phasellus posuere diam leo potenti. Elit id pretium lacus volutpat molestie. Faucibus tempor eget neque diam magnis leo pulvinar. Suscipit tellus scelerisque enim tempor. In pellentesque ut fringilla ut. Libero et a habitant mauris."
+    "question": "Немає доступу до програми.",
+    "answer": "Спробуйте повторно авторизуватись через 10 хвилин. Якщо ситуація не змінилася, повідомте наш технічний відділ про цю проблему."
   },
   {
-    "question": "Lorem ipsum dolor sit amet consectetur. Fames vivamus dignissim praesent luctus. Eros orci quam cras eget. Semper sagittis ultricies sed purus volutpat. Massa elit viverra lectus at et.",
-    "answer": "Lorem ipsum dolor sit amet consectetur. A tincidunt sit diam nunc fames adipiscing nisl. Tincidunt ultricies aliquet pellentesque netus. Purus tellus tempus dignissim sem phasellus posuere diam leo potenti. Elit id pretium lacus volutpat molestie. Faucibus tempor eget neque diam magnis leo pulvinar. Suscipit tellus scelerisque enim tempor. In pellentesque ut fringilla ut. Libero et a habitant mauris."
+    "question": "Пристрій не працює.",
+    "answer": "Спочатку необхідно визначити, що саме не працює. Переконайтеся, що на пристрій подається живлення і він увімкнений (перевірте світлодіодну індикацію). Також перевірте запобіжник у проводах пристрою та в транспортному засобі й замініть його, якщо це необхідно."
   },
   {
-    "question": "Lorem ipsum dolor sit amet consectetur. Fames vivamus dignissim praesent luctus. Eros orci quam cras eget. Semper sagittis ultricies sed purus volutpat. Massa elit viverra lectus at et.",
-    "answer": "Lorem ipsum dolor sit amet consectetur. A tincidunt sit diam nunc fames adipiscing nisl. Tincidunt ultricies aliquet pellentesque netus. Purus tellus tempus dignissim sem phasellus posuere diam leo potenti. Elit id pretium lacus volutpat molestie. Faucibus tempor eget neque diam magnis leo pulvinar. Suscipit tellus scelerisque enim tempor. In pellentesque ut fringilla ut. Libero et a habitant mauris."
+    "question": "Пристрій увімкнений, але даних немає.",
+    "answer": "Іноді трапляються збої в роботі мобільної мережі, що може призвести до \"зависання\" пристрою. Перевірте індикацію світлодіодів на пристрої. Якщо є з'єднання з мережею, білий світлодіод гаснутиме раз на три секунди та швидко блиматиме під час передачі накопичених даних. Якщо всі три світлодіоди горять без змін, спробуйте від’єднати трекер від живлення, а потім перезапустіть його, затиснувши кнопку живлення на 3 секунди. Якщо світлодіоди згасли, трекер вимкнено. Після підключення живлення зачекайте, поки він передасть дані на сервер (свідчитиме швидке миготіння світлодіода)."
   },
   {
-    "question": "Lorem ipsum dolor sit amet consectetur. Fames vivamus dignissim praesent luctus. Eros orci quam cras eget. Semper sagittis ultricies sed purus volutpat. Massa elit viverra lectus at et.",
-    "answer": "Lorem ipsum dolor sit amet consectetur. A tincidunt sit diam nunc fames adipiscing nisl. Tincidunt ultricies aliquet pellentesque netus. Purus tellus tempus dignissim sem phasellus posuere diam leo potenti. Elit id pretium lacus volutpat molestie. Faucibus tempor eget neque diam magnis leo pulvinar. Suscipit tellus scelerisque enim tempor. In pellentesque ut fringilla ut. Libero et a habitant mauris."
+    "question": "Пристрій не вимикається або не вмикається після затискання кнопки живлення чи підключення кабелю живлення.",
+    "answer": "Пристрій неможливо вимкнути кнопкою, якщо він підключений до стаціонарного живлення. Також при підключенні кабелю з живленням від мережі або прикурювача пристрій вмикається автоматично. Якщо трекер не реагує на затискання кнопки живлення або підключення кабелю – зверніться до технічної підтримки."
+  },
+  {
+    "question": "Як призупинити або відновити обслуговування пристрою?",
+    "answer": "У разі призупинення обслуговування передача даних припиняється, а плата за обслуговування пристрою не стягується. Для повторного підключення необхідно оплатити вартість послуги підключення та абонплату за наступний місяць (Вартість підключення = вартість абонплати за 1 місяць). Відключення та підключення пристроїв здійснюється ВИКЛЮЧНО за заявкою на електронну пошту. У заявці необхідно вказати назву організації, серійний номер та тип пристрою."
   }
 ]
