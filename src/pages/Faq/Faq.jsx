@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import data from '@data/questions.json';
 
 import css from './Faq.module.scss';
+import FaqItem from '../../components/FaqItem';
 
 const Faq = () => {
   const [visible, setVisible] = useState(null);
@@ -12,11 +13,8 @@ const Faq = () => {
     setQuestions(data);
   }, []);
 
-  const showQuestion = (i) => {
-    if (visible === i) {
-      return setVisible(null);
-    }
-    setVisible(i);
+  const toggleQuestion = (index) => {
+    setVisible((prev) => (prev === index ? null : index));
   };
 
   return (
@@ -27,17 +25,15 @@ const Faq = () => {
           <br /> Можливо, у нас вже є на них відповіді
         </h2>
 
-        {questions && (
+        {questions.length > 0 && (
           <ul className={css.list}>
-            {questions.map((item, i) => (
-              <li key={i} onClick={() => showQuestion(i)} className={css.listItem}>
-                <div className={css.card}>
-                  <div className={css.question}>{item.question}</div>
-                  <div className={`${css.answer} ${visible === i && css.visible}`}>
-                    {item.answer}
-                  </div>
-                </div>
-              </li>
+            {questions.map((item, index) => (
+              <FaqItem
+                key={item.question}
+                item={item}
+                isOpen={visible === index}
+                onClick={() => toggleQuestion(index)}
+              />
             ))}
           </ul>
         )}
