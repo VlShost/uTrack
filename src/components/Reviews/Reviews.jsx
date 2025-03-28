@@ -46,18 +46,14 @@ const Reviews = () => {
             744: {
               slidesPerView: 1,
               centeredSlides: false,
-              loop: true,
               spaceBetween: 10,
             },
             1024: {
               slidesPerView: 2,
-              centeredSlides: false,
-              loop: false,
               spaceBetween: 10,
             },
             1440: {
               slidesPerView: 3,
-              centeredSlides: false,
               spaceBetween: 24,
             },
           }}

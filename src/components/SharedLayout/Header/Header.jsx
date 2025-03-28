@@ -20,6 +20,8 @@ const Header = () => {
 
   useEffect(() => {
     const closeDropdown = (e) => {
+      if (!btnRef.current) return;
+
       if (!btnRef.current.contains(e.target)) {
         setBurgerVisible(false);
       }

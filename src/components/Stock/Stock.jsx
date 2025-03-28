@@ -58,11 +58,11 @@ const Stock = () => {
             watchOverflow={true}
             slidesPerView={1}
             spaceBetween={34}
-            autoplay={{
-              delay: 5000,
-              disableOnInteraction: false,
-              pauseOnMouseEnter: true,
-            }}
+            // autoplay={{
+            //   delay: 5000,
+            //   disableOnInteraction: false,
+            //   pauseOnMouseEnter: true,
+            // }}
             speed={1500}
             pagination={{
               el: '#swiperStockPagination',
@@ -72,13 +72,11 @@ const Stock = () => {
               744: {
                 slidesPerView: 2,
                 centeredSlides: false,
-                loop: true,
                 spaceBetween: 10,
               },
               1024: {
                 slidesPerView: 3,
                 centeredSlides: false,
-                loop: false,
                 spaceBetween: 10,
               },
               1440: {
