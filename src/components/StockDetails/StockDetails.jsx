@@ -9,7 +9,7 @@ const StockDetails = ({ data, images }) => {
   return (
     <div className={css.detailsModal}>
       <div className={css.imgWrapper}>
-        {x1 !== '' || x2 !== '' ? (
+        {x1 || x2 ? (
           <img
             loading="lazy"
             srcSet={`${x1} 1x, ${x2} 2x`}
@@ -20,37 +20,49 @@ const StockDetails = ({ data, images }) => {
         ) : (
           <div className={css.placeholderWrapper}>
             <svg className={css.imgPlaceholder}>
-              <use href={svg + '#placeholder'}></use>
+              <use href={`${svg}#placeholder`}></use>
             </svg>
           </div>
         )}
       </div>
-      {name && <p className={css.name}>{name}</p>}
-      {price && <p className={css.price}>{price}грн.</p>}
-      {info && (
+      {name ? <p className={css.name}>{name}</p> : <p className={css.name}>Інформація відсутня</p>}
+      {price > 0 ? (
+        <p className={css.price}>{price}грн.</p>
+      ) : (
+        <p className={css.pricePlaceholder}>
+          Ціну уточнюйте за номером
+          <br />
+          технічної підтримки
+        </p>
+      )}
+      {info ? (
         <div className={css.infoWrapper}>
           <span className={css.title}>Опис</span>
           <p className={css.info}>{info}</p>
         </div>
+      ) : (
+        <p className={css.info}>Уточнюйте за номером технічної підтримки</p>
       )}
 
       <div className={css.moreInfoWrapper}>
-        {characteristics && (
-          <div className={css.infoWrapper}>
-            <span className={css.title}>Характеристики</span>
+        <div className={css.infoWrapper}>
+          <span className={css.title}>Характеристики</span>
+          {characteristics.length > 0 ? (
             <ul className={css.info}>
-              {characteristics.map((item) => (
-                <li key={item} className={css.listItem}>
+              {characteristics.map((item, i) => (
+                <li key={i} className={css.listItem}>
                   {item}
                 </li>
               ))}
             </ul>
-          </div>
-        )}
+          ) : (
+            <p className={css.info}>Уточнюйте за номером технічної підтримки</p>
+          )}
+        </div>
 
-        {supply && (
-          <div className={css.infoWrapper}>
-            <span className={css.title}>Комплект постачання</span>
+        <div className={css.infoWrapper}>
+          <span className={css.title}>Комплект постачання</span>
+          {supply.length > 0 ? (
             <ol className={css.info}>
               {supply.map((item) => (
                 <li key={item} className={css.orderedListItem}>
@@ -58,8 +70,10 @@ const StockDetails = ({ data, images }) => {
                 </li>
               ))}
             </ol>
-          </div>
-        )}
+          ) : (
+            <p className={css.info}>Уточнюйте за номером технічної підтримки</p>
+          )}
+        </div>
       </div>
     </div>
   );

@@ -92,6 +92,20 @@
   }
 }
 
+.pricePlaceholder {
+  margin-top: 12px;
+
+  font-size: 18px;
+  font-weight: 700;
+  text-align: end;
+
+  color: getColor('accent');
+
+  @media screen and (min-width: $tablet) {
+    text-align: start;
+  }
+}
+
 .moreInfoWrapper {
   @media screen and (min-width: $tablet) {
     display: flex;
