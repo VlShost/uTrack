@@ -28,10 +28,11 @@ const Reviews = () => {
           className={css.swiper}
           grabCursor={true}
           keyboard={{ enabled: true }}
-          centeredSlides={true}
+          centeredSlides={false}
           watchOverflow={true}
           slidesPerView={1}
           spaceBetween={34}
+          // loop={true}
           autoplay={{
             delay: 7000,
             disableOnInteraction: false,
@@ -45,7 +46,6 @@ const Reviews = () => {
           breakpoints={{
             744: {
               slidesPerView: 1,
-              centeredSlides: false,
               spaceBetween: 10,
             },
             1024: {

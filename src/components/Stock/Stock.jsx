@@ -19,7 +19,6 @@ const Stock = () => {
 
   useEffect(() => {
     const processedStock = data.map((item) => {
-      // Приводим путь JSON к такому же формату, как в import.meta.glob()
       const x1Path = `/src/assets/${item.images.x1}`;
       const x2Path = `/src/assets/${item.images.x2}`;
 
@@ -54,15 +53,10 @@ const Stock = () => {
             className={css.swiper}
             grabCursor={true}
             keyboard={{ enabled: true }}
-            centeredSlides={true}
+            centeredSlides={false}
             watchOverflow={true}
             slidesPerView={1}
             spaceBetween={34}
-            // autoplay={{
-            //   delay: 5000,
-            //   disableOnInteraction: false,
-            //   pauseOnMouseEnter: true,
-            // }}
             speed={1500}
             pagination={{
               el: '#swiperStockPagination',
@@ -71,17 +65,13 @@ const Stock = () => {
             breakpoints={{
               744: {
                 slidesPerView: 2,
-                centeredSlides: false,
                 spaceBetween: 10,
               },
               1024: {
                 slidesPerView: 3,
-                centeredSlides: false,
-                spaceBetween: 10,
               },
               1440: {
                 slidesPerView: 3,
-                centeredSlides: false,
                 spaceBetween: 24,
               },
             }}
