@@ -1,14 +1,15 @@
-@import 'modern-normalize/modern-normalize.css';
-@import './vars';
-@import './utils';
-@import './reset';
+@use 'modern-normalize/modern-normalize.css';
+@use './vars' as *;
+@use './utils' as *;
+@use './reset';
 
 body {
-  background-color: getColor('body-bg');
-  color: getColor('txt-black');
+  background-color: #{getColor('body-bg')};
+  color: #{getColor('txt-black')};
 
-  font-family: 'Outfit', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
-    'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family:
+    'Outfit', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
   font-style: normal;
   font-size: 14px;
   -webkit-font-smoothing: antialiased;

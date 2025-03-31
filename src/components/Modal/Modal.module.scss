@@ -1,4 +1,5 @@
-@import '../../styles/utils';
+@use '../../styles/utils' as *;
+@use '../../styles/vars' as *;
 
 .modalBackdrop {
   position: fixed;

@@ -1,4 +1,5 @@
-@import '../../styles/utils.scss';
+@use '../../styles/utils.scss' as *;
+@use '../../styles/vars' as *;
 
 .listItem {
   margin-top: 24px;

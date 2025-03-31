@@ -1,8 +1,11 @@
-@import '../../styles/utils';
+@use '../../styles/utils' as *;
+@use '../../styles/vars' as *;
 
 .section {
   @include section();
-  padding-top: 80px;
+  & {
+    padding-top: 80px;
+  }
 
   @media screen and (min-width: $tablet) {
     padding-top: 100px;
@@ -52,7 +55,7 @@
 .text {
   margin-top: 16px;
 
-  color: getColor('txt-black');
+  color: #{getColor('txt-black')};
 
   text-align: justify;
 
@@ -72,7 +75,7 @@
 }
 
 .textStrong {
-  color: getColor('txt-black');
+  color: #{getColor('txt-black')};
 
   font-weight: 600;
 }
